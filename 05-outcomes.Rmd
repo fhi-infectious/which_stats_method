@@ -1,0 +1,6 @@
+# Outcomes
+
+## Length of stay
+
+If your outcome is length of stay in a hospital, you should consider using a generalized linear model with Poisson or negative binomial distribution or Gaussian with log link [@austin_comparison_2002].
+

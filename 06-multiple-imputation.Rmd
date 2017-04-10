@@ -1,0 +1,5 @@
+# Multiple imputation
+
+## Longitudinal data
+
+If the longitudinal measurements were taken at roughly ordered intervals (e.g. "1 month checkup", "5 month checkup"), then try to reshape the data to wide format (one row per person) and then perform multiple imputations [@allison_missing_2002, @statistical_consulting_group_ucla_how_2017].

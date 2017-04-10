@@ -1,0 +1,17 @@
+--- 
+title: "A Compendium Of Statistics Questions"
+author: "Richard White"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: raubreywhite/raubreywhite.github.io
+description: "A compendium of commonly asked statistical questions."
+---
+
+# Purpose
+
+This is a compendium of commonly asked statistical questions.

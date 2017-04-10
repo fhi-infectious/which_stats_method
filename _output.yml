@@ -1,0 +1,30 @@
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      collapse: subsection
+      scroll_highlight: yes
+      before: |
+        <li><a href="/">Home</a></li>
+    edit: https://github.com/raubreywhite/raubreywhite.github.io/edit/master/xsrc_book/%s
+    download: ["pdf"]
+    search: yes
+  fontsettings:
+      theme: white
+      family: sans
+      size: 1
+  sharing:
+      facebook: yes
+      twitter: yes
+      google: no
+      weibo: no
+      instapper: no
+      vk: no
+      all: null

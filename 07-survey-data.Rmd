@@ -1,0 +1,9 @@
+# Survey data
+
+## Obtaining coefficients via regression modelling {#survey-coefs-regression}
+
+If your data comes from a complex survey (i.e. stratified sampling, two-stage, clusters, etc.) then you should make your regression model reflect the sampling strategy that was used to bias your sample away from the population [@gelman_struggles_2007].
+
+## Obtaining population estimates via regression modelling
+
+You should begin by forming a model as explained in Chapter \@ref(survey-coefs-regression) And then use this model make estimates for each group. Then perform a weighted average [@gelman_struggles_2007].
