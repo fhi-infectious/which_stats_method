@@ -1,6 +1,6 @@
-# Syllabus {#intro}
+# File setup {#intro}
 
-## Logistics
+## blah
 
 Instructor: Richard White [richard.white@fhi.no]
 Time: 09:00 - 11:45, 18th September 2017

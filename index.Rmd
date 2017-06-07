@@ -11,3 +11,11 @@ link-citations: yes
 github-repo: raubreywhite/which_stats_method
 description: "A quick course in learning which statistical methods should be applied where."
 ---
+
+# Syllabus
+
+## Logistics
+
+Instructor: Richard White [richard.white@fhi.no]
+Time: 09:00 - 11:45, 18th September 2017
+Location: Main auditorium, L8, Lindern Campus
