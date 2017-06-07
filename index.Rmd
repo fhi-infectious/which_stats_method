@@ -1,5 +1,5 @@
 --- 
-title: "A Compendium Of Statistics Questions"
+title: "Which Stats Method Should I Use?"
 author: "Richard White"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,10 +8,6 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: raubreywhite/raubreywhite.github.io
-description: "A compendium of commonly asked statistical questions."
+github-repo: raubreywhite/which_stats_method
+description: "A quick course in learning which statistical methods should be applied where."
 ---
-
-# Purpose
-
-This is a compendium of commonly asked statistical questions.

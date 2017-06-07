@@ -1,5 +1,12 @@
-# Introduction {#intro}
+# Syllabus {#intro}
 
+## Logistics
+
+Instructor: Richard White [richard.white@fhi.no]
+Time: 09:00 - 11:45, 18th September 2017
+Location: Main auditorium, L8, Lindern Campus
+
+## Rationale
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., .
 
 Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
