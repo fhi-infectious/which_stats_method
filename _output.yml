@@ -27,4 +27,4 @@ bookdown::gitbook:
       weibo: no
       instapper: no
       vk: no
-      all: null
+      all: no

@@ -20,7 +20,7 @@ Instructor: Richard White [richard.white@fhi.no]
 
 Time: 09:00 - 11:45, 18th September 2017
 
-Location: Main auditorium, L8, Lindern Campus
+Location: Main auditorium, L8, Lindern Campus, Folkehelseinstittutet, Oslo
 
 Language: English
 
@@ -61,7 +61,7 @@ Lecture 2
 
 ## Course Requirements
 
-To participate in this course, it is recommended that you have some experience with either research or data.
+To participate in this course it is recommended that you have some experience with either research or data.
 
-For the last 30 minutes of the course, we will be going through examples of analyses performed at FHI, and identifying which statistical methods are appropriate. If you would like your analysis to be featured/included in this section, please send an email to richard.white@fhi.no briefly describing your problem.
+For the last 30 minutes of the course we will be going through examples of analyses performed at FHI and identifying which statistical methods are appropriate. If you would like your analysis to be featured/included in this section, please send an email to richard.white@fhi.no briefly describing your problem.
 
