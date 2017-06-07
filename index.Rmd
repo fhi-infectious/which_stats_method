@@ -28,7 +28,7 @@ Language: English
 
 This course will provide a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
 
-Note: This course will *not* teach students how to implement these statistical methods, as there is not sufficient time.
+Note: This course will _not_ teach students how to implement these statistical methods, as there is not sufficient time.
 
 ## Course Specific Learning Outcomes
 
