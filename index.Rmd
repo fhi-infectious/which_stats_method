@@ -34,7 +34,7 @@ Language: English
 
 10:10 - 10:15: Break
 
-11:15 - 11:45: Real examples from FHI
+11:15 - 11:45: Examples from FHI
 
 ## Rationale and Course Aims
 
