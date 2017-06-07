@@ -28,12 +28,18 @@ Language: English
 
 This course will provide a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
 
-Note: This course will _not_ teach students how to implement these statistical methods, as there is not sufficient time.
+Note: This course will **not** teach students how to implement these statistical methods, as there is not sufficient time.
 
 ## Course Specific Learning Outcomes
 
-1. Identify continuous, categorical, and censored variables
-2. Identify 
+1. Identify continuous, categorical, count, and censored variables
+2. Identify when your data does not have any dependencies (i.e. all observations are independent of each other)
+3. Identify when your data has complicated dependencies that need to be taken into account (longitudinal data, clustered data, matched data)
+4. Identify when linear, logistic, poisson, negative binomial, and cox regression models should be used
+5. Identify when mixed effects regression models should be used
+6. Understand the similarities between t-tests, ANOVA, and regression
+7. Understand the different methods 
+
 
 ## Format and Procedures
 
