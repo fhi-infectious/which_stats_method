@@ -1,3 +1,3 @@
 #!/bin/sh
 
-dr /git/compendium/_internal_build.sh
+dr /git/which_stats_method/_internal_build.sh

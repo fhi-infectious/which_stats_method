@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd ~/git/compendium/
+cd ~/git/which_stats_method/
 
 rm -rf docs
 
