@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A Compendium Of Statistics Questions</title>
+  <meta name="description" content="A compendium of commonly asked statistical questions.">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+
+  <meta property="og:title" content="A Compendium Of Statistics Questions" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A compendium of commonly asked statistical questions." />
+  <meta name="github-repo" content="raubreywhite/raubreywhite.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Compendium Of Statistics Questions" />
+  
+  <meta name="twitter:description" content="A compendium of commonly asked statistical questions." />
+  
+
+<meta name="author" content="Richard White">
+
+
+<meta name="date" content="2017-06-07">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="matching.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="/">Home</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Purpose</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="folder-structure.html"><a href="folder-structure.html"><i class="fa fa-check"></i><b>3</b> Folder structure</a></li>
+<li class="chapter" data-level="4" data-path="docker.html"><a href="docker.html"><i class="fa fa-check"></i><b>4</b> Docker</a><ul>
+<li class="chapter" data-level="4.1" data-path="docker.html"><a href="docker.html#what-is-docker-and-why-is-it-good"><i class="fa fa-check"></i><b>4.1</b> What is Docker, and why is it good?</a></li>
+<li class="chapter" data-level="4.2" data-path="docker.html"><a href="docker.html#what-is-repl"><i class="fa fa-check"></i><b>4.2</b> What is REPL?</a></li>
+<li class="chapter" data-level="4.3" data-path="docker.html"><a href="docker.html#what-is-vim"><i class="fa fa-check"></i><b>4.3</b> What is VIM?</a></li>
+<li class="chapter" data-level="4.4" data-path="docker.html"><a href="docker.html#what-is-vim-slime"><i class="fa fa-check"></i><b>4.4</b> What is vim-slime?</a></li>
+<li class="chapter" data-level="4.5" data-path="docker.html"><a href="docker.html#which-docker-containers-should-i-use"><i class="fa fa-check"></i><b>4.5</b> Which Docker containers should I use?</a></li>
+<li class="chapter" data-level="4.6" data-path="docker.html"><a href="docker.html#putting-it-all-together"><i class="fa fa-check"></i><b>4.6</b> Putting it all together</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="linear-regression-vs-anova.html"><a href="linear-regression-vs-anova.html"><i class="fa fa-check"></i><b>5</b> Linear Regression vs ANOVA</a><ul>
+<li class="chapter" data-level="5.1" data-path="linear-regression-vs-anova.html"><a href="linear-regression-vs-anova.html#summary"><i class="fa fa-check"></i><b>5.1</b> Summary</a></li>
+<li class="chapter" data-level="5.2" data-path="linear-regression-vs-anova.html"><a href="linear-regression-vs-anova.html#empirical-evidence"><i class="fa fa-check"></i><b>5.2</b> Empirical evidence</a></li>
+<li class="chapter" data-level="5.3" data-path="linear-regression-vs-anova.html"><a href="linear-regression-vs-anova.html#statistical-proof"><i class="fa fa-check"></i><b>5.3</b> Statistical proof</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="outcomes.html"><a href="outcomes.html"><i class="fa fa-check"></i><b>6</b> Outcomes</a><ul>
+<li class="chapter" data-level="6.1" data-path="outcomes.html"><a href="outcomes.html#length-of-stay"><i class="fa fa-check"></i><b>6.1</b> Length of stay</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-imputation.html"><a href="multiple-imputation.html"><i class="fa fa-check"></i><b>7</b> Multiple imputation</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-imputation.html"><a href="multiple-imputation.html#longitudinal-data"><i class="fa fa-check"></i><b>7.1</b> Longitudinal data</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="regressions-using-survey-data.html"><a href="regressions-using-survey-data.html"><i class="fa fa-check"></i><b>8</b> Regressions using survey data</a><ul>
+<li class="chapter" data-level="8.1" data-path="regressions-using-survey-data.html"><a href="regressions-using-survey-data.html#literature-summary"><i class="fa fa-check"></i><b>8.1</b> Literature summary</a></li>
+<li class="chapter" data-level="8.2" data-path="regressions-using-survey-data.html"><a href="regressions-using-survey-data.html#setup"><i class="fa fa-check"></i><b>8.2</b> Setup</a></li>
+<li class="chapter" data-level="8.3" data-path="regressions-using-survey-data.html"><a href="regressions-using-survey-data.html#case-control-studies"><i class="fa fa-check"></i><b>8.3</b> Case-control studies</a></li>
+<li class="chapter" data-level="8.4" data-path="regressions-using-survey-data.html"><a href="regressions-using-survey-data.html#oversampling-a-population-with-a-higher-level-of-the-outcome"><i class="fa fa-check"></i><b>8.4</b> Oversampling a population with a higher level of the outcome</a></li>
+<li class="chapter" data-level="8.5" data-path="regressions-using-survey-data.html"><a href="regressions-using-survey-data.html#oversampling-a-population-with-a-higher-level-of-the-outcome-and-exposure"><i class="fa fa-check"></i><b>8.5</b> Oversampling a population with a higher level of the outcome and exposure</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matching.html"><a href="matching.html"><i class="fa fa-check"></i><b>9</b> Matching</a><ul>
+<li class="chapter" data-level="9.1" data-path="matching.html"><a href="matching.html#in-case-control-studies"><i class="fa fa-check"></i><b>9.1</b> In case control studies</a></li>
+<li class="chapter" data-level="9.2" data-path="matching.html"><a href="matching.html#in-non-case-control-studies"><i class="fa fa-check"></i><b>9.2</b> In non-case control studies</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Compendium Of Statistics Questions</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+
+<div id="refs" class="references">
+<div>
+<p>Allison, Paul David. 2002. <em>Missing Data</em>. Sage University Papers. Quantitative Applications in the Social Sciences, no. 07-136. Thousand Oaks, Calif: Sage Publications.</p>
+</div>
+<div>
+<p>Austin, Peter C., Deanna M. Rothwell, and Jack V. Tu. 2002. “A Comparison of Statistical Modeling Strategies for Analyzing Length of Stay After CABG Surgery.” <em>Health Services and Outcomes Research Methodology</em> 3 (2): 107–33. doi:<a href="https://doi.org/10.1023/A:1024260023851">10.1023/A:1024260023851</a>.</p>
+</div>
+<div>
+<p>Friedman, Jed. 2013. “Tools of the Trade: When to Use Those Sample Weights.” <a href="http://blogs.worldbank.org/impactevaluations/tools-of-the-trade-when-to-use-those-sample-weights" class="uri">http://blogs.worldbank.org/impactevaluations/tools-of-the-trade-when-to-use-those-sample-weights</a>.</p>
+</div>
+<div>
+<p>Fuller, Wayne A. 2009. <em>Sampling Statistics</em>. Hoboken, NJ, USA: John Wiley &amp; Sons, Inc. <a href="http://doi.wiley.com/10.1002/9780470523551" class="uri">http://doi.wiley.com/10.1002/9780470523551</a>.</p>
+</div>
+<div>
+<p>Gelman, Andrew. 2005. “Analysis of Variance? Why It Is More Important Than Ever.” <em>The Annals of Statistics</em> 33 (1): 1–53. doi:<a href="https://doi.org/10.1214/009053604000001048">10.1214/009053604000001048</a>.</p>
+</div>
+<div>
+<p>Hardy, Michael. 2012. “Difference Between Regression Analysis and Analysis of Variance? - Cross Validated.” <a href="http://stats.stackexchange.com/questions/34616/difference-between-regression-analysis-and-analysis-of-variance/34618" class="uri">http://stats.stackexchange.com/questions/34616/difference-between-regression-analysis-and-analysis-of-variance/34618</a>.</p>
+</div>
+<div>
+<p>Rubin, Donald B. 1973. “Matching to Remove Bias in Observational Studies.” <em>Biometrics</em> 29 (1): 159–83. doi:<a href="https://doi.org/10.2307/2529684">10.2307/2529684</a>.</p>
+</div>
+<div>
+<p>Solon, Gary, Steven Haider, and Jeffrey Wooldridge. 2013. “What Are We Weighting For?” w18859. Cambridge, MA: National Bureau of Economic Research. <a href="http://www.nber.org/papers/w18859.pdf" class="uri">http://www.nber.org/papers/w18859.pdf</a>.</p>
+</div>
+<div>
+<p>UCLA, Statistical Consulting Group. 2017. “How Can I Perform Multiple Imputation on Longitudinal Data Using ICE?” <a href="http://www.ats.ucla.edu/stat/stata/faq/mi_longitudinal.htm" class="uri">http://www.ats.ucla.edu/stat/stata/faq/mi_longitudinal.htm</a>.</p>
+</div>
+<div>
+<p>Xie, Yihui. 2016. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://github.com/rstudio/bookdown" class="uri">https://github.com/rstudio/bookdown</a>.</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="matching.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/raubreywhite/raubreywhite.github.io/edit/master/xsrc_book/09-references.Rmd",
+"text": "Edit"
+},
+"download": ["a-compendium-of-statistics-questions.pdf"],
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

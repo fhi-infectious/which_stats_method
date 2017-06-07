@@ -1,16 +1,11 @@
 #!/bin/sh
 
-set -e
+cd ~/git/compendium/
 
-[ -z "${GITHUB_PAT}" ] && exit 0
-[ "${TRAVIS_BRANCH}" != "master" ] && exit 0
+rm -rf docs
 
-git config --global user.email "xie@yihui.name"
-git config --global user.name "Yihui Xie"
+mv _book docs
+git add .
+git commit -m"Update the website" || true
+git push -f origin master
 
-git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git book-output
-cd book-output
-cp -r ../_book/* ./
-git add --all *
-git commit -m"Update the book" || true
-git push -q origin gh-pages

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A Compendium Of Statistics Questions</title>
+  <meta name="description" content="A compendium of commonly asked statistical questions.">
+  <meta name="generator" content="bookdown 0.3.17 and GitBook 2.6.7">
+
+  <meta property="og:title" content="A Compendium Of Statistics Questions" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A compendium of commonly asked statistical questions." />
+  <meta name="github-repo" content="raubreywhite/raubreywhite.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Compendium Of Statistics Questions" />
+  
+  <meta name="twitter:description" content="A compendium of commonly asked statistical questions." />
+  
+
+<meta name="author" content="Richard White">
+
+
+<meta name="date" content="2017-04-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="multiple-imputation.html">
+<link rel="next" href="matching.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="/">Home</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Purpose</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="folder-structure.html"><a href="folder-structure.html"><i class="fa fa-check"></i><b>3</b> Folder structure</a></li>
+<li class="chapter" data-level="4" data-path="docker.html"><a href="docker.html"><i class="fa fa-check"></i><b>4</b> Docker</a><ul>
+<li class="chapter" data-level="4.1" data-path="docker.html"><a href="docker.html#what-is-docker-and-why-is-it-good"><i class="fa fa-check"></i><b>4.1</b> What is Docker, and why is it good?</a></li>
+<li class="chapter" data-level="4.2" data-path="docker.html"><a href="docker.html#what-is-repl"><i class="fa fa-check"></i><b>4.2</b> What is REPL?</a></li>
+<li class="chapter" data-level="4.3" data-path="docker.html"><a href="docker.html#what-is-vim"><i class="fa fa-check"></i><b>4.3</b> What is VIM?</a></li>
+<li class="chapter" data-level="4.4" data-path="docker.html"><a href="docker.html#what-is-vim-slime"><i class="fa fa-check"></i><b>4.4</b> What is vim-slime?</a></li>
+<li class="chapter" data-level="4.5" data-path="docker.html"><a href="docker.html#which-docker-containers-should-i-use"><i class="fa fa-check"></i><b>4.5</b> Which Docker containers should I use?</a></li>
+<li class="chapter" data-level="4.6" data-path="docker.html"><a href="docker.html#putting-it-all-together"><i class="fa fa-check"></i><b>4.6</b> Putting it all together</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="linear-regression-vs-anova.html"><a href="linear-regression-vs-anova.html"><i class="fa fa-check"></i><b>5</b> Linear Regression vs ANOVA</a><ul>
+<li class="chapter" data-level="5.1" data-path="linear-regression-vs-anova.html"><a href="linear-regression-vs-anova.html#summary"><i class="fa fa-check"></i><b>5.1</b> Summary</a></li>
+<li class="chapter" data-level="5.2" data-path="linear-regression-vs-anova.html"><a href="linear-regression-vs-anova.html#empirical-evidence"><i class="fa fa-check"></i><b>5.2</b> Empirical evidence</a></li>
+<li class="chapter" data-level="5.3" data-path="linear-regression-vs-anova.html"><a href="linear-regression-vs-anova.html#statistical-proof"><i class="fa fa-check"></i><b>5.3</b> Statistical proof</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="outcomes.html"><a href="outcomes.html"><i class="fa fa-check"></i><b>6</b> Outcomes</a><ul>
+<li class="chapter" data-level="6.1" data-path="outcomes.html"><a href="outcomes.html#length-of-stay"><i class="fa fa-check"></i><b>6.1</b> Length of stay</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-imputation.html"><a href="multiple-imputation.html"><i class="fa fa-check"></i><b>7</b> Multiple imputation</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-imputation.html"><a href="multiple-imputation.html#longitudinal-data"><i class="fa fa-check"></i><b>7.1</b> Longitudinal data</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="survey-data.html"><a href="survey-data.html"><i class="fa fa-check"></i><b>8</b> Survey data</a><ul>
+<li class="chapter" data-level="8.1" data-path="survey-data.html"><a href="survey-data.html#survey-coefs-regression"><i class="fa fa-check"></i><b>8.1</b> Obtaining coefficients via regression modelling</a></li>
+<li class="chapter" data-level="8.2" data-path="survey-data.html"><a href="survey-data.html#obtaining-population-estimates-via-regression-modelling"><i class="fa fa-check"></i><b>8.2</b> Obtaining population estimates via regression modelling</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matching.html"><a href="matching.html"><i class="fa fa-check"></i><b>9</b> Matching</a><ul>
+<li class="chapter" data-level="9.1" data-path="matching.html"><a href="matching.html#in-case-control-studies"><i class="fa fa-check"></i><b>9.1</b> In case control studies</a></li>
+<li class="chapter" data-level="9.2" data-path="matching.html"><a href="matching.html#in-non-case-control-studies"><i class="fa fa-check"></i><b>9.2</b> In non-case control studies</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Compendium Of Statistics Questions</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="survey-data" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Survey data</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(data.table)
+x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10000</span>)
+d &lt;-<span class="st"> </span><span class="kw">data.table</span>(x)
+d[,y:<span class="er">=</span>x+<span class="kw">rnorm</span>(.N)]</code></pre></div>
+<pre><code>##                  x          y
+##     1: 0.002258624 -0.2810514
+##     2: 0.741198022 -1.3551372
+##     3: 0.934665501  0.1456076
+##     4: 0.737283812  0.8506852
+##     5: 0.925398815  1.5973026
+##    ---                       
+##  9996: 0.853055098 -0.1804727
+##  9997: 0.546521902  0.1645471
+##  9998: 0.873570508 -0.3655465
+##  9999: 0.409336999 -0.4743526
+## 10000: 0.818648303  0.3498516</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d1 &lt;-<span class="st"> </span>d[y&gt;<span class="fl">0.5</span>]
+d1[,oversampled:<span class="er">=</span><span class="dv">1</span>]</code></pre></div>
+<pre><code>##               x         y oversampled
+##    1: 0.7372838 0.8506852           1
+##    2: 0.9253988 1.5973026           1
+##    3: 0.1527700 1.3945997           1
+##    4: 0.5984117 0.6627785           1
+##    5: 0.3756777 1.4452358           1
+##   ---                                
+## 4998: 0.6259429 2.2523439           1
+## 4999: 0.1981229 1.0103382           1
+## 5000: 0.4418529 1.2401392           1
+## 5001: 0.2799310 2.1207895           1
+## 5002: 0.5487135 0.7382255           1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d2 &lt;-<span class="st"> </span>d[y&lt;<span class="fl">0.5</span>]
+d2[,oversampled:<span class="er">=</span><span class="dv">0</span>]</code></pre></div>
+<pre><code>##                 x           y oversampled
+##    1: 0.002258624 -0.28105135           0
+##    2: 0.741198022 -1.35513721           0
+##    3: 0.934665501  0.14560758           0
+##    4: 0.693350263 -0.07064517           0
+##    5: 0.020089667 -0.60252820           0
+##   ---                                    
+## 4994: 0.853055098 -0.18047265           0
+## 4995: 0.546521902  0.16454706           0
+## 4996: 0.873570508 -0.36554646           0
+## 4997: 0.409336999 -0.47435261           0
+## 4998: 0.818648303  0.34985164           0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dx &lt;-<span class="st"> </span><span class="kw">rbind</span>(d1,d1,d1,d1,d1,d2)
+dx[,id:<span class="er">=</span><span class="dv">1</span>:.N]</code></pre></div>
+<pre><code>##                x          y oversampled    id
+##     1: 0.7372838  0.8506852           1     1
+##     2: 0.9253988  1.5973026           1     2
+##     3: 0.1527700  1.3945997           1     3
+##     4: 0.5984117  0.6627785           1     4
+##     5: 0.3756777  1.4452358           1     5
+##    ---                                       
+## 30004: 0.8530551 -0.1804727           0 30004
+## 30005: 0.5465219  0.1645471           0 30005
+## 30006: 0.8735705 -0.3655465           0 30006
+## 30007: 0.4093370 -0.4743526           0 30007
+## 30008: 0.8186483  0.3498516           0 30008</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dx[,inclProb :<span class="er">=</span><span class="st"> </span><span class="dv">5</span>]</code></pre></div>
+<pre><code>##                x          y oversampled    id inclProb
+##     1: 0.7372838  0.8506852           1     1        5
+##     2: 0.9253988  1.5973026           1     2        5
+##     3: 0.1527700  1.3945997           1     3        5
+##     4: 0.5984117  0.6627785           1     4        5
+##     5: 0.3756777  1.4452358           1     5        5
+##    ---                                                
+## 30004: 0.8530551 -0.1804727           0 30004        5
+## 30005: 0.5465219  0.1645471           0 30005        5
+## 30006: 0.8735705 -0.3655465           0 30006        5
+## 30007: 0.4093370 -0.4743526           0 30007        5
+## 30008: 0.8186483  0.3498516           0 30008        5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dx[oversampled==<span class="dv">0</span>, inclProb:<span class="er">=</span><span class="dv">1</span>]</code></pre></div>
+<pre><code>##                x          y oversampled    id inclProb
+##     1: 0.7372838  0.8506852           1     1        5
+##     2: 0.9253988  1.5973026           1     2        5
+##     3: 0.1527700  1.3945997           1     3        5
+##     4: 0.5984117  0.6627785           1     4        5
+##     5: 0.3756777  1.4452358           1     5        5
+##    ---                                                
+## 30004: 0.8530551 -0.1804727           0 30004        1
+## 30005: 0.5465219  0.1645471           0 30005        1
+## 30006: 0.8735705 -0.3655465           0 30006        1
+## 30007: 0.4093370 -0.4743526           0 30007        1
+## 30008: 0.8186483  0.3498516           0 30008        1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">lm</span>(y~x,<span class="dt">data=</span>d))</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = y ~ x, data = d)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.2664 -0.6770  0.0068  0.6808  4.0597 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -0.01415    0.02021   -0.70    0.484    
+## x            1.01094    0.03508   28.82   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.01 on 9998 degrees of freedom
+## Multiple R-squared:  0.0767, Adjusted R-squared:  0.0766 
+## F-statistic: 830.5 on 1 and 9998 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">lm</span>(y~x,<span class="dt">data=</span>dx))</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = y ~ x, data = dx)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.6872 -0.4413  0.0108  0.5247  3.5004 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  0.63500    0.01069   59.42   &lt;2e-16 ***
+## x            0.76430    0.01745   43.79   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.8608 on 30006 degrees of freedom
+## Multiple R-squared:  0.06006,    Adjusted R-squared:  0.06003 
+## F-statistic:  1917 on 1 and 30006 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">lm</span>(y~x,<span class="dt">data=</span>dx,<span class="dt">weights=</span><span class="dv">1</span>/inclProb))</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = y ~ x, data = dx, weights = 1/inclProb)
+## 
+## Weighted Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.2664  0.0266  0.2413  0.4688  1.8155 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -0.01415    0.01167  -1.213    0.225    
+## x            1.01094    0.02025  49.925   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.5829 on 30006 degrees of freedom
+## Multiple R-squared:  0.0767, Adjusted R-squared:  0.07666 
+## F-statistic:  2492 on 1 and 30006 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">des &lt;-<span class="st"> </span>survey::<span class="kw">svydesign</span>(<span class="dt">id=</span>~id,<span class="dt">prob=</span>~inclProb,<span class="dt">data=</span>dx)
+<span class="kw">summary</span>(survey::<span class="kw">svyglm</span>(y~x, <span class="dt">design=</span>des, <span class="dt">family=</span>gaussian))</code></pre></div>
+<pre><code>## 
+## Call:
+## svyglm(formula = y ~ x, design = des, family = gaussian)
+## 
+## Survey design:
+## survey::svydesign(id = ~id, prob = ~inclProb, data = dx)
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -0.01415    0.01562  -0.906    0.365    
+## x            1.01094    0.02720  37.173   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for gaussian family taken to be 1.019415)
+## 
+## Number of Fisher Scoring iterations: 2</code></pre>
+<p>confounder &lt;- runif(10000) d &lt;- data.table(confounder) d[,x:=2*confounder+runif(.N)] d[,y:=x+confounder+rnorm(.N)] d[,yproxy:=y+rnorm(.N)] d[,xproxy:=x+rnorm(.N)]</p>
+<p>d1 &lt;- d[y&gt;1] d1[,oversampled:=1] d1[,N:=.N*5] d2 &lt;- d[y&lt;1] d2[,oversampled:=0] d2[,N:=.N] dx &lt;- rbind(d1,d1,d1,d1,d1,d2) dx[,tN:=.N] dx[,inclProb := 5] dx[oversampled==0, inclProb:=1] dx[,id:=1:.N] dx[,personIntercept := rnorm(.N)] dxx &lt;- reshape::untable(df=dx, num=5) dxx[,ylongitudinal:=y+personIntercept+rnorm(.N)/2] dxx[,invProb:=1/inclProb]</p>
+<p>summary(lm(y<sub>x+confounder,data=d)) summary(lm(y</sub>x+confounder,data=dx)) summary(lm(y~x+confounder,data=dx,weights=1/inclProb))</p>
+<p>summary(lm(y<sub>x+confounder,data=dxx,weights=1/inclProb)) summary(lme4::lmer(ylongitudinal</sub>x+confounder+(1|id),data=dxx,weights=1/inclProb)) summary(lme4::lmer(ylongitudinal~x+confounder+(1|id),data=dxx))</p>
+<p>des &lt;- survey::svydesign(id=<sub>id,prob=</sub>inclProb,data=dxx) summary(survey::svyglm(ylongitudinal~x+confounder, design=des, family=gaussian))</p>
+<p>des &lt;- survey::svydesign(id=<sub>id,prob=</sub>inclProb,data=dx) summary(survey::svyglm(y~x+confounder, design=des, family=gaussian))</p>
+<p>d1 &lt;- d[x&gt;0.5] d1[,oversampled:=1] d1[,N:=.N*5] d2 &lt;- d[x&lt;0.5] d2[,oversampled:=0] d2[,N:=.N] dx &lt;- rbind(d1,d1,d1,d1,d1,d2) dx[,tN:=.N] dx[,inclProb := 5] dx[oversampled==0, inclProb:=1] dx[,id:=1:.N] dx[,personIntercept := rnorm(.N)] dxx &lt;- reshape::untable(df=dx, num=5) dxx[,ylongitudinal:=y+personIntercept+rnorm(.N)/2] dxx[,invProb:=1/inclProb]</p>
+<p>summary(lm(y<sub>x+confounder,data=d)) summary(lm(y</sub>x+confounder,data=dx)) summary(lm(y~x+confounder,data=dx,weights=1/inclProb))</p>
+<p>summary(lm(y<sub>x+confounder,data=dxx,weights=1/inclProb)) summary(lme4::lmer(ylongitudinal</sub>x+confounder+(1|id),data=dxx,weights=1/inclProb)) summary(lme4::lmer(ylongitudinal~x+confounder+(1|id),data=dxx))</p>
+<p>des &lt;- survey::svydesign(id=<sub>id,prob=</sub>inclProb,data=dxx) summary(survey::svyglm(ylongitudinal~x+confounder, design=des, family=gaussian))</p>
+<p>des &lt;- survey::svydesign(id=<sub>id,prob=</sub>inclProb,data=dx) summary(survey::svyglm(y~x+confounder, design=des, family=gaussian))</p>
+<div id="survey-coefs-regression" class="section level2">
+<h2><span class="header-section-number">8.1</span> Obtaining coefficients via regression modelling</h2>
+<p>If your data comes from a complex survey (i.e. stratified sampling, two-stage, clusters, etc.) then you should make your regression model reflect the sampling strategy that was used to bias your sample away from the population <span class="citation">(Gelman <a href="#ref-gelman_struggles_2007">2007</a>)</span>.</p>
+</div>
+<div id="obtaining-population-estimates-via-regression-modelling" class="section level2">
+<h2><span class="header-section-number">8.2</span> Obtaining population estimates via regression modelling</h2>
+<p>You should begin by forming a model as explained in Chapter <a href="survey-data.html#survey-coefs-regression">8.1</a> And then use this model make estimates for each group. Then perform a weighted average <span class="citation">(Gelman <a href="#ref-gelman_struggles_2007">2007</a>)</span>.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-gelman_struggles_2007">
+<p>Gelman, Andrew. 2007. “Struggles with Survey Weighting and Regression Modeling.” <em>Statistical Science</em> 22 (2): 153–64. doi:<a href="https://doi.org/10.1214/088342306000000691">10.1214/088342306000000691</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="multiple-imputation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="matching.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/raubreywhite/raubreywhite.github.io/edit/master/xsrc_book/07-survey-data.Rmd",
+"text": "Edit"
+},
+"download": ["a-compendium-of-statistics-questions.pdf"],
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
