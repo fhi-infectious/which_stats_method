@@ -24,6 +24,18 @@ Location: Main auditorium, L8, Lindern Campus
 
 Language: English
 
+## Format and Procedures
+
+09:00 to 10:00: Lecture 1
+
+10:00 to 10:10: Break
+
+10:10 to 11:10: Lecture 2
+
+10:10 to 10:15: Break
+
+11:15 to 11:45: Questions and Answers
+
 ## Rationale and Course Aims
 
 This course will provide a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
@@ -32,20 +44,21 @@ Note: This course will **not** teach students how to implement these statistical
 
 ## Course Specific Learning Outcomes
 
+Lecture 1
+
 1. Identify continuous, categorical, count, and censored variables
 2. Identify when your data does not have any dependencies (i.e. all observations are independent of each other)
 3. Identify when your data has complicated dependencies that need to be taken into account (longitudinal data, clustered data, matched data)
 4. Identify when linear, logistic, poisson, negative binomial, and cox regression models should be used
+
+Lecture 2
+
 5. Identify when mixed effects regression models should be used
 6. Understand the similarities between t-tests, ANOVA, and regression
-7. Understand the different methods 
-
-
-## Format and Procedures
-
-## My assumptions
+7. Understand the different imputation methods used when lab data is below the limit of detection (LOD)
 
 ## Course Requirements
+
 
 
 I. Rationale:  
