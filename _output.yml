@@ -13,7 +13,7 @@ bookdown::gitbook:
       scroll_highlight: yes
       before: |
         <li><a href="/">Home</a></li>
-    edit: https://github.com/raubreywhite/raubreywhite.github.io/edit/master/which_stats_method/%s
+    edit: https://github.com/raubreywhite/which_stats_method/edit/master/which_stats_method/%s
     download: ["pdf"]
     search: yes
   fontsettings:
