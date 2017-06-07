@@ -9,7 +9,7 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: raubreywhite/which_stats_method
-description: "A quick course in learning which statistical methods should be applied where."
+description: "A short course in learning which statistical methods should be applied where."
 ---
 
 # Syllabus
@@ -21,3 +21,47 @@ Instructor: Richard White [richard.white@fhi.no]
 Time: 09:00 - 11:45, 18th September 2017
 
 Location: Main auditorium, L8, Lindern Campus
+
+## Rationale
+
+This course exists to provide a basic awareness of general statistical methodology that can be useful in infectious diseases, environmental medicine, and labwork.
+
+## Course Aims
+
+By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
+
+## Course Specific Learning Outcomes
+
+1. Identify continuous, categorical, and censored data
+2. Identify 
+
+## Format and Procedures
+
+## My assumptions
+
+## Course Requirements
+
+
+I. Rationale:  
+Why does this course exist? How does it fit in with the rest of the field/area’s curriculum? 
+
+II. Course Aims and Outcomes:  
+Aims
+Thinking from the prospective students’ point of view, what general outcomes is the course designed to achieve? How will it contribute to them professionally?
+
+Specific Learning Outcomes:
+By the end of this course, students will: 
+List as specifically as possible the learning outcomes the course is intended to produce. It is helpful here to think about the kinds of evidence you will need to assess the students’ learning as your outcomes should drive your assessment and grading schema. Kinds of evidence can be manifest in what students say, do, think and/or feel. What they say (as on an exam, paper, project, homework, etc., or in class discussion) is a reflection of their thinking. Feelings are often neglected in specifying course or class outcomes, yet the research on the role of affect (emotions and feelings) in learning has been well documented and has been shown to have a significant influence and integration with cognitive learning. For example, if you were teaching a course on ecology it would be difficult to do without addressing human values, which have an affective aspect to them. If certain psychomotor skills are intended to be developed, the evidence will be in doing (as in a lab course where actions like titration, completing successful assays, collecting meaningful data and analyzing it are regular expectations) they should be articulated as clearly as possible. A well stated outcome has two components: substance (content/subject matter like osmosis or absorption) and form: what action must the student perform with regards to the substance (compare and contrast, evaluate, analyze, apply, etc.)
+
+III. Format and Procedures:  
+How is the course structured and how will classes be carried out? What behavioral expectations does the instructor have for the students in class? This is where specifications for attendance, participation, respect for others, etc. should be spelled out to act as a behavioral guide. If the course has multiple formats (like lecture & recitation, lab and discussion, group learning projects and/or presentations) these should be explained clearly
+IV.  My Assumptions
+This is a section where the instructor can communicate his or her personal assumptions and/or biases regarding the course content to set it off from other similar courses and other instructors. Does the instructor have a unique operational definition for some of the core course concepts? What principles and/or beliefs about either the content or how to effectively learn the content held by the instructor would it be helpful for the students to know up front?
+V. Course Requirements:  Whatever tasks and assignments you include in your course should be aligned with the specified learning outcomes (final learning state, skills, knowledge, attitudes and values the students leave the course with) you have defined and specified earlier.
+
+1. Class attendance and participation policy:  
+
+2. Course readings:  
+ 	(a) Required text: 
+ 
+(b) Background readings, course packet available in the university bookstore? Use of course Blackboard web site? Download and bring handouts to class?
