@@ -16,17 +16,19 @@ description: "A short course in learning which statistical methods should be app
 
 ## Logistics
 
-Language: English
-
 Instructor: Richard White [richard.white@fhi.no]
 
 Time: 09:00 - 11:45, 18th September 2017
 
 Location: Main auditorium, L8, Lindern Campus
 
+Language: English
+
 ## Rationale and Course Aims
 
 This course will provide a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
+
+Note: This course will *not* teach students how to implement these statistical methods, as there is not sufficient time.
 
 ## Course Specific Learning Outcomes
 
