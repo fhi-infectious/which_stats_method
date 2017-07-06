@@ -14,17 +14,15 @@ description: "A short course in learning which statistical methods should be app
 
 # Syllabus
 
-## Logistics
+**Instructor:** Richard White [richard.white@fhi.no]
 
-Instructor: Richard White [richard.white@fhi.no]
+**Time:** 09:00 - 11:45, 18th September 2017
 
-Time: 09:00 - 11:45, 18th September 2017
+**Location:** Main auditorium, L8, Lindern Campus, Folkehelseinstittutet, Oslo
 
-Location: Main auditorium, L8, Lindern Campus, Folkehelseinstittutet, Oslo
+**Language:** English
 
-Language: English
-
-## Format and Procedures
+**Format and Procedures**
 
 09:00 - 10:00: Lecture 1
 
@@ -36,32 +34,42 @@ Language: English
 
 11:15 - 11:45: Examples from FHI
 
-## Rationale and Course Aims
+**Description**
 
 This course will provide a basic overview of general statistical methodology that can be useful in the areas of infectious diseases, environmental medicine, and labwork. By the end of this course, students will be able to identify appropriate statistical methods for a variety of circumstances.
 
-Note: This course will **not** teach students how to implement these statistical methods, as there is not sufficient time.
+This course will **not** teach students how to implement these statistical methods, as there is not sufficient time. The aim of this course is to enable the student to identify which methods are required for their study, allowing the student to identify their needs for subsequent methods courses, self-learning, or external help.
 
-## Course Specific Learning Outcomes
+You should register for this course if you are one of the following:
 
-Lecture 1
+- Have experience with applying statistical methods, but are sometimes confused or uncertain as to whether or not you have selected the correct method.
+- Do not have experience with applying statistical methods, and would like to get an overview over which methods are applicable for your projects so that you can then undertake further studies in these areas.
 
-1. Identify continuous, categorical, count, and censored variables
-2. Identify when your data does not have any dependencies (i.e. all observations are independent of each other)
-3. Identify when your data has complicated dependencies that need to be taken into account (longitudinal data, clustered data, matched data)
-4. Identify when linear and logistic regression models should be used
-5. Identify when poisson, negative binomial, and cox regression models should be used
+**Lecture 1**
 
-Lecture 2
+1. Identifying continuous, categorical, count, and censored variables
+2. Identifying exposure and outcome variables
+3. Identifying when t-tests (paired and unpaired) should be used
+4. Identifying when non-parametric t-test equivalents should be used
+5. Identifying when ANOVA should be used
+6. Identifying when linear regression should be used
+7. Identifying the similarities between t-tests, ANOVA, and regression
+8. Identifying when logistic regression models should be used
+9. Identifying when Poisson/negative binomial and cox regression models should be used
+10. Identifying when chi-squared/fisher’s exact test should be used
 
-6. Identify when mixed effects regression models should be used
-7. Understand the similarities between t-tests, ANOVA, and regression
-8. Understand the different imputation methods used when lab data is below the limit of detection (LOD)
-9. Understanding best practicies for data files and project folders
+**Lecture 2**
 
-## Course Requirements
+1. Identifying when data does not have any dependencies (i.e. all observations are independent of each other) versus when data has complicated dependencies (i.e. longitudinal data, matched data, multiple cohorts)
+2. Identifying when mixed effects regression models should be used
+3. Identifying when conditional logistic regression models should be used
+4. (TBD) Understanding the different imputation methods used when lab data is below the limit of detection (LOD)
+5. (TBD) Understanding the best practices for data files and project folders
+
+**Prerequisites**
 
 To participate in this course it is recommended that you have some experience with either research or data.
 
-For the last 30 minutes of the course we will be going through examples of analyses performed at FHI and identifying which statistical methods are appropriate. If you would like your analysis to be featured/included in this section, please send an email to richard.white@fhi.no briefly describing your problem.
+**Additional information**
 
+For the last 30 minutes of the course we will be going through examples of analyses performed at FHI and identifying which statistical methods are appropriate. If you would like your analysis to be featured/included in this section, please send an email to richard.white@fhi.no briefly describing your problem.
