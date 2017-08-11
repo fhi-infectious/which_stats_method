@@ -49,8 +49,14 @@ $\text{H}_1$: The average height of men is not equal to 180cm
 #### Assumptions
 
 Aim: test if the mean of a continuous variable differs from a specified value
+
 Outcome: continuous variable, all observations independent, distributed as a Normal distribution
+
 Exposure: Does not exist
+
+#### Non-parametric equivalent
+
+
 
 ## Two sample t-tests
 
@@ -70,7 +76,7 @@ $\text{H}_1$: The average height of men is not equal to the average height of wo
 
 There are two kinds of two-sample t-tests: paired and unpaired.
 
-### Paired t-test
+### Two-sample paired t-test
 
 A paired t-test is a special case where we have $N$ participants, and each participant has two observations (generally "before experiment" and "after experiment"). We want to test if the mean of outcome variable differs between "after" and "before".
 
@@ -82,14 +88,45 @@ $\text{H}_0: \mu_{\text{after}-\text{before}} = 0$
 
 $\text{H}_1: \mu_{\text{after}-\text{before}} \ne 0$
 
+#### Assumptions
+
 Aim: test if the mean of a continuous variable measured twice for each participant differs between "before" and "after"
+
 Special preprocessing of data: for each participant subtract the "before" observation from the "after" observation
+
 Outcome: ("after weight" minus "before weight") continuous variable, all observations within each group independent, distributed as a Normal distribution
+
 Exposure: "Before" vs "After"
 
-### Unpaired t-test
+#### Non-parametric equivalent
 
-Unpaired t-tests assume that there are no connections between the two groups
+Wilcoxon signed-rank test
+
+### Two-sample unpaired t-test
+
+An unpaired t-test is where we have two independent groups of $N_1$ and $N_2$ participants, and we want to test if the mean of the outcome variable differs between $\text{group}_1$ and $\text{group}_2$.
+
+$\text{H}_0: \mu_0 = \mu_1$
+
+$\text{H}_1: \mu_0 \ne \mu_1$
+
+Or rephrased:
+
+$\text{H}_0$: The average height of men is equal to the average height of women
+
+$\text{H}_1$: The average height of men is not equal to the average height of women
+
+#### Assumptions
+
+Aim: test if the mean of a continuous variable differs between $\text{group}_1$ and $\text{group}_2$.
+
+Outcome: continuous variable, all observations within each group independent, distributed as a Normal distribution
+
+Exposure: $\text{group}_1$ vs $\text{group}_2$
+
+#### Non-parametric equivalent
+
+Mann–Whitney U test (also called the Mann–Whitney–Wilcoxon (MWW), Wilcoxon rank-sum test, or Wilcoxon–Mann–Whitney test)
 
 ## Identifying when non-parametric t-test equivalents should be used
 

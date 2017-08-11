@@ -78,8 +78,8 @@
 <li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#one-sample-t-test"><i class="fa fa-check"></i><b>2.3</b> One sample t-test</a></li>
 <li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#two-sample-t-tests"><i class="fa fa-check"></i><b>2.4</b> Two sample t-tests</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="intro.html"><a href="intro.html#what-is-a-two-sample-t-test"><i class="fa fa-check"></i><b>2.4.1</b> What is a two sample t-test?</a></li>
-<li class="chapter" data-level="2.4.2" data-path="intro.html"><a href="intro.html#paired-t-test"><i class="fa fa-check"></i><b>2.4.2</b> Paired t-test</a></li>
-<li class="chapter" data-level="2.4.3" data-path="intro.html"><a href="intro.html#unpaired-t-test"><i class="fa fa-check"></i><b>2.4.3</b> Unpaired t-test</a></li>
+<li class="chapter" data-level="2.4.2" data-path="intro.html"><a href="intro.html#two-sample-paired-t-test"><i class="fa fa-check"></i><b>2.4.2</b> Two-sample paired t-test</a></li>
+<li class="chapter" data-level="2.4.3" data-path="intro.html"><a href="intro.html#two-sample-unpaired-t-test"><i class="fa fa-check"></i><b>2.4.3</b> Two-sample unpaired t-test</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#identifying-when-non-parametric-t-test-equivalents-should-be-used"><i class="fa fa-check"></i><b>2.5</b> Identifying when non-parametric t-test equivalents should be used</a></li>
 <li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#identifying-when-anova-should-be-used"><i class="fa fa-check"></i><b>2.6</b> Identifying when ANOVA should be used</a></li>
@@ -148,7 +148,12 @@
 <p><span class="math inline">\(\text{H}_1\)</span>: The average height of men is not equal to 180cm</p>
 <div id="assumptions" class="section level4">
 <h4><span class="header-section-number">2.3.0.1</span> Assumptions</h4>
-<p>Aim: test if the mean of a continuous variable differs from a specified value Outcome: continuous variable, all observations independent, distributed as a Normal distribution Exposure: Does not exist</p>
+<p>Aim: test if the mean of a continuous variable differs from a specified value</p>
+<p>Outcome: continuous variable, all observations independent, distributed as a Normal distribution</p>
+<p>Exposure: Does not exist</p>
+</div>
+<div id="non-parametric-equivalent" class="section level4">
+<h4><span class="header-section-number">2.3.0.2</span> Non-parametric equivalent</h4>
 </div>
 </div>
 <div id="two-sample-t-tests" class="section level2">
@@ -163,18 +168,43 @@
 <p><span class="math inline">\(\text{H}_1\)</span>: The average height of men is not equal to the average height of women</p>
 <p>There are two kinds of two-sample t-tests: paired and unpaired.</p>
 </div>
-<div id="paired-t-test" class="section level3">
-<h3><span class="header-section-number">2.4.2</span> Paired t-test</h3>
+<div id="two-sample-paired-t-test" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Two-sample paired t-test</h3>
 <p>A paired t-test is a special case where we have <span class="math inline">\(N\)</span> participants, and each participant has two observations (generally “before experiment” and “after experiment”). We want to test if the mean of outcome variable differs between “after” and “before”.</p>
 <p>For example, in a weight-loss experiment, we have <span class="math inline">\(N\)</span> participants and we want to see if the average “after weight” is different from the average “before weight”.</p>
 <p>This is done by subtracting the outcome from one group (“before weight”) from the outcome in the other group (“after weight”) for each person (“difference in weight”), and then performing a one-sample t-test to see if the mean of this variable is different from zero.</p>
 <p><span class="math inline">\(\text{H}_0: \mu_{\text{after}-\text{before}} = 0\)</span></p>
 <p><span class="math inline">\(\text{H}_1: \mu_{\text{after}-\text{before}} \ne 0\)</span></p>
-<p>Aim: test if the mean of a continuous variable measured twice for each participant differs between “before” and “after” Special preprocessing of data: for each participant subtract the “before” observation from the “after” observation Outcome: (“after weight” minus “before weight”) continuous variable, all observations within each group independent, distributed as a Normal distribution Exposure: “Before” vs “After”</p>
+<div id="assumptions-1" class="section level4">
+<h4><span class="header-section-number">2.4.2.1</span> Assumptions</h4>
+<p>Aim: test if the mean of a continuous variable measured twice for each participant differs between “before” and “after”</p>
+<p>Special preprocessing of data: for each participant subtract the “before” observation from the “after” observation</p>
+<p>Outcome: (“after weight” minus “before weight”) continuous variable, all observations within each group independent, distributed as a Normal distribution</p>
+<p>Exposure: “Before” vs “After”</p>
 </div>
-<div id="unpaired-t-test" class="section level3">
-<h3><span class="header-section-number">2.4.3</span> Unpaired t-test</h3>
-<p>Unpaired t-tests assume that there are no connections between the two groups</p>
+<div id="non-parametric-equivalent-1" class="section level4">
+<h4><span class="header-section-number">2.4.2.2</span> Non-parametric equivalent</h4>
+<p>Wilcoxon signed-rank test</p>
+</div>
+</div>
+<div id="two-sample-unpaired-t-test" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Two-sample unpaired t-test</h3>
+<p>An unpaired t-test is where we have two independent groups of <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span> participants, and we want to test if the mean of the outcome variable differs between <span class="math inline">\(\text{group}_1\)</span> and <span class="math inline">\(\text{group}_2\)</span>.</p>
+<p><span class="math inline">\(\text{H}_0: \mu_0 = \mu_1\)</span></p>
+<p><span class="math inline">\(\text{H}_1: \mu_0 \ne \mu_1\)</span></p>
+<p>Or rephrased:</p>
+<p><span class="math inline">\(\text{H}_0\)</span>: The average height of men is equal to the average height of women</p>
+<p><span class="math inline">\(\text{H}_1\)</span>: The average height of men is not equal to the average height of women</p>
+<div id="assumptions-2" class="section level4">
+<h4><span class="header-section-number">2.4.3.1</span> Assumptions</h4>
+<p>Aim: test if the mean of a continuous variable differs between <span class="math inline">\(\text{group}_1\)</span> and <span class="math inline">\(\text{group}_2\)</span>.</p>
+<p>Outcome: continuous variable, all observations within each group independent, distributed as a Normal distribution</p>
+<p>Exposure: <span class="math inline">\(\text{group}_1\)</span> vs <span class="math inline">\(\text{group}_2\)</span></p>
+</div>
+<div id="non-parametric-equivalent-2" class="section level4">
+<h4><span class="header-section-number">2.4.3.2</span> Non-parametric equivalent</h4>
+<p>Mann–Whitney U test (also called the Mann–Whitney–Wilcoxon (MWW), Wilcoxon rank-sum test, or Wilcoxon–Mann–Whitney test)</p>
+</div>
 </div>
 </div>
 <div id="identifying-when-non-parametric-t-test-equivalents-should-be-used" class="section level2">
