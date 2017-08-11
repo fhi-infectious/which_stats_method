@@ -96,7 +96,7 @@ Special preprocessing of data: for each participant subtract the "before" observ
 
 Outcome: ("after weight" minus "before weight") continuous variable, all observations within each group independent, distributed as a Normal distribution
 
-Exposure: "Before" vs "After"
+Exposure: $\text{group}_\text{after}$ vs $\text{group}_\text{before}$
 
 #### Non-parametric equivalent
 
@@ -130,14 +130,53 @@ Mann–Whitney U test (also called the Mann–Whitney–Wilcoxon (MWW), Wilcoxon
 
 ## Identifying when non-parametric t-test equivalents should be used
 
-## Identifying when ANOVA should be used
+Non-parametric t-test equivalents should be used when the Normality distribution fails.
+
+## ANOVA
+
+ANOVA
+
+#### Assumptions
+
+#### Non-parametric equivalent
+
+Kruskal–Wallis test
 
 ## Identifying when linear regression should be used
 
-## Identifying the similarities between t-tests, ANOVA, and regression
+#### Assumptions
+
+Aim: test if the mean of a continuous variable differs between $\text{group}_1$ and $\text{group}_2$.
+
+Outcome: continuous variable
+
+Exposure:
+
+- Continuous
+- Binary (0 or 1)
+- Categorical (0, 1, 2, ...)
+- Count data
+
+## Identifying the similarities between t-tests, ANOVA, and linear regression
+
+t-tests are ANOVA with only two groups
+
+t-tests are linear regressions with a binary (0/1) exposure
+
+ANOVA is a lienar regression with a categorical exposure
 
 ## Identifying when logistic regression models should be used
 
-## Identifying when Poisson/negative binomial and cox regression models should be used
+When you have a binary (0/1) outcome
+
+## Identifying when Poisson/negative binomial models should be used
+
+When your outcome is count data
+
+## Cox regression models should be used
+
+When you have survival data
 
 ## Identifying when chi-squared/fisher’s exact test should be used
+
+When you have a categorical outcome and a categorical exposure

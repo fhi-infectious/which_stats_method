@@ -1,3 +1,13 @@
-# Folder structure
+# Lecture 2
 
-Here is a review of existing methods.
+## Identifying when data does not have any dependencies (i.e. all observations are independent of each other) versus when data has complicated dependencies (i.e. longitudinal data, matched data, multiple cohorts)
+
+
+## Identifying when mixed effects regression models should be used
+
+## Identifying when conditional logistic regression models should be used
+
+## (TBD) Understanding the different imputation methods used when lab data is below the limit of detection (LOD)
+
+## (TBD) Understanding the best practices for data files and project folders
+
