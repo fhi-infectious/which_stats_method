@@ -32,11 +32,31 @@ $\text{H}_1$: It is not summer
 
 Our observed data for today is an average temperature of -20C today. Assuming it is summer, how likely is it that today's average temperature will be -20C? Not very likely! We therefore reject $\text{H}_0$ ("it is summer") in favor of $\text{H}_1$ ("it is not summer"). That is, we conclude that it is not summer today.
 
-## t-tests
+## One sample t-test
 
-### What is a t-test?
+A one sample t-test tests if the mean of a continuous variable differs from a specified value (generally zero)
 
-A t-test compares the means of two groups.
+$\text{H}_0: \mu = 180$
+
+$\text{H}_1: \mu \ne 180$
+
+Or rephrased:
+
+$\text{H}_0$: The average height of men is equal to the 180cm
+
+$\text{H}_1$: The average height of men is not equal to 180cm
+
+#### Assumptions
+
+Aim: test if the mean of a continuous variable differs from a specified value
+Outcome: continuous variable, all observations independent, distributed as a Normal distribution
+Exposure: Does not exist
+
+## Two sample t-tests
+
+### What is a two sample t-test?
+
+A t-test tests if the mean of a continuous variable differs between two groups.
 
 $\text{H}_0: \mu_0 = \mu_1$
 
@@ -48,10 +68,28 @@ $\text{H}_0$: The average height of men is equal to the average height of women
 
 $\text{H}_1$: The average height of men is not equal to the average height of women
 
+There are two kinds of two-sample t-tests: paired and unpaired.
 
 ### Paired t-test
 
+A paired t-test is a special case where we have $N$ participants, and each participant has two observations (generally "before experiment" and "after experiment"). We want to test if the mean of outcome variable differs between "after" and "before".
+
+For example, in a weight-loss experiment, we have $N$ participants and we want to see if the average "after weight" is different from the average "before weight".
+
+This is done by subtracting the outcome from one group ("before weight") from the outcome in the other group ("after weight") for each person ("difference in weight"), and then performing a one-sample t-test to see if the mean of this variable is different from zero. 
+
+$\text{H}_0: \mu_{\text{after}-\text{before}} = 0$
+
+$\text{H}_1: \mu_{\text{after}-\text{before}} \ne 0$
+
+Aim: test if the mean of a continuous variable measured twice for each participant differs between "before" and "after"
+Special preprocessing of data: for each participant subtract the "before" observation from the "after" observation
+Outcome: ("after weight" minus "before weight") continuous variable, all observations within each group independent, distributed as a Normal distribution
+Exposure: "Before" vs "After"
+
 ### Unpaired t-test
+
+Unpaired t-tests assume that there are no connections between the two groups
 
 ## Identifying when non-parametric t-test equivalents should be used
 
