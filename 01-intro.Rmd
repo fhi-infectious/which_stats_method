@@ -13,7 +13,13 @@ For example:
 - Height
 - BMI
 - Blood pressure
-- _______
+
+Come up with 5 of your own examples:
+- 
+- 
+- 
+- 
+- 
 
 ### Binary variables
 
