@@ -15,6 +15,7 @@ For example:
 - Blood pressure
 
 Come up with 5 of your own examples:
+
 - 
 - 
 - 
@@ -33,6 +34,14 @@ For example:
 - Sick or healthy
 - Born in Norway vs Born outside of Norway
 
+Come up with 5 of your own examples:
+
+- 
+- 
+- 
+- 
+- 
+
 ### Categorical variable
 
 A variable is categorical if there is no meaningful "distance" between values.
@@ -43,6 +52,14 @@ For example:
 - Born in Norway vs Born outside of Norway
 - Cancer stage (I, II, III, or IV)
 - BMI category (underweight, normal, or overweight)
+
+Come up with 5 of your own examples:
+
+- 
+- 
+- 
+- 
+- 
 
 ### Censored variables
 
