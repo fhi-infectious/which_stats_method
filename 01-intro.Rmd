@@ -32,6 +32,16 @@ $\text{H}_1$: It is not summer
 
 Our observed data for today is an average temperature of -20C today. Assuming it is summer, how likely is it that today's average temperature will be -20C? Not very likely! We therefore reject $\text{H}_0$ ("it is summer") in favor of $\text{H}_1$ ("it is not summer"). That is, we conclude that it is not summer today.
 
+## Which method to use?
+
+Deciding on the appropriate statistical method is fairly easy. You just look at the:
+
+- Outcome (type and distribution)
+- Exposure (type)
+- Dependencies in the data
+
+And then essentially use a flowchart.
+
 ## One sample t-test
 
 A one sample t-test tests if the mean of a continuous variable differs from a specified value (generally zero)
@@ -56,7 +66,7 @@ Exposure: Does not exist
 
 #### Non-parametric equivalent
 
-
+This is to be used when the Normal distribution assumption does not hold
 
 ## Two sample t-tests
 
@@ -167,7 +177,8 @@ ANOVA is a lienar regression with a categorical exposure
 
 ## Identifying when logistic regression models should be used
 
-When you have a binary (0/1) outcome
+- When you have a binary (0/1) outcome
+- When you are doing a case-control study [case control studies can ONLY be analysed using logistic regression]
 
 ## Identifying when Poisson/negative binomial models should be used
 
