@@ -1,0 +1,99 @@
+# Variable Types
+
+## Continuous Variables
+
+A variable is continuous there is a meaningful "distance" between values.
+
+For example:
+
+- Temperature
+- Weight
+- Height
+- BMI
+- Blood pressure
+- 
+\hfill \break
+\hfill \break
+- 
+\hfill \break
+\hfill \break
+
+## Binary Variables
+
+A variable is binary if it can only hold two values.
+
+For example:
+
+- 0 or 1
+- True or false
+- Male or female
+- Sick or healthy
+- Born in Norway vs Born outside of Norway
+- 
+\hfill \break
+\hfill \break
+- 
+\hfill \break
+\hfill \break
+
+## Categorical Variable
+
+A variable is categorical if there is no meaningful "distance" between values.
+
+For example:
+
+- Sick or healthy
+- Born in Norway vs Born outside of Norway
+- Cancer stage (I, II, III, or IV)
+- BMI category (underweight, normal, or overweight)
+- 
+\hfill \break
+\hfill \break
+- 
+\hfill \break
+\hfill \break
+
+## Censored Variables
+
+Censored variables are a subset of continuous variables. They are artificially cutoff ("censored") at some point.
+
+For example:
+
+- Height -- if everyone over 175cm is recorded as "175+"
+- Age -- if everyone under 10 years old is recorded as "<=10"
+- Time alive since receiving illness diagnosis if there is loss to followup (i.e. we know that the person has lived at least 4 years before we lost track of them)
+- 
+\hfill \break
+\hfill \break
+- 
+\hfill \break
+\hfill \break
+
+## Count Variables
+
+Count variables are a subset of continuous variables. They can only have integer values (e.g. 0, 1, 2, 3).
+
+For example:
+
+- Number of cars that use the parking lot in a day
+- Number of influenza patients who use the hospital every day
+- Number of tuberculosis patients who are screened every year
+- 
+\hfill \break
+\hfill \break
+- 
+\hfill \break
+\hfill \break
+
+## Independent Versus Dependent Variables
+
+An independent variable is often called an exposure or predictor variable. In an experiment, this variable is manipulated by the researcher.
+
+A dependent variable is often called the outcome. In research, we generally want to see if (the following all mean the same thing):
+
+- The dependent variable is dependent on the independent variable
+- The predictor variable predicts the outcome.
+- The exposure affects the outcome
+
+For ease of understanding, we will use the terms "outcome" and "exposure" for the rest of this course.
+

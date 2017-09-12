@@ -1,0 +1,65 @@
+# Complicated regression
+
+## Dependencies in your data
+
+### What is independent data
+
+Broadly, having knowledge about one observation should not give you knowledge about other observations in your dataset.
+
+For example, if we flip a coin ten times, knowing the result of the first coin toss (heads) will not give us knowledge about the subsequent 9 coin tosses.
+
+### What is data with dependencies
+
+In reality, most data have dependencies, so we will focus on some of the most important kinds that will severely impact your analyses if you do not identify them.
+
+### Repeated measures/longitudinal data
+
+If you have a dataset with repeated measures (e.g. some people in your cohort have more than one observation), then the repeated observations on each person cause dependencies in the data. That is, if a person has their weight measured five times, then just by knowing their first weight you can have a good guess at what their subsequent weights will be.
+
+### Matched data
+
+Inside case-control studies, for each case a control (or multiple cases) can be selected to have similar attributes. For example, for each case, a control can be selected with a similar age. These controls have been "matched" to a case, and have introduced dependencies into the data.
+
+### Grouped/clustered data
+
+Repeated measures data is a type of clustered data, where each person is their own cluster. Matched data is also a type of clustered data, where each group of matched controls-to-a-case is a cluster.
+
+There can be many other kinds of clusters, for example:
+
+- Data sampled from multiple hospitals could have the hospital as the cluster variable
+- Data sampled from multiple countries could have the country as the cluster variable
+- Data sampled from multiple counties/municipalities could have the country/municipality as the cluster variable
+- If it is a study of children, and multiple children from each mother are included, then the mother could be the cluster variable
+
+## Analysing data with dependencies
+
+### Mixed effects regression
+
+Mixed effects regression is an extension of the simple regression models (fixed effects) that we learned about in the previous chapter. You can have:
+
+- Mixed effects linear regression
+- Mixed effects logistic regression
+- Mixed effects negative-binomial regression
+
+Mixed effects models are models that have both fixed and random effects. "Effects" is the term used to describe the estimated impact a variable has on the outcome. For example, "the effect of smoking on the risk of lung cancer".
+
+To determine if an effect is fixed or random, we introduce the concept of pooling data (i.e. sharing strength). Let us assume we have sampled 100 people per city for 9 cities, and 2 people for 1 city, and we want to estimate the average height in each city, we can do one of the following three options:
+
+1. Within each city, take the average height of the 100 (or 2) sampled people (zero pooling)
+2. Take the average height of 1000 sampled people and say each city is the same height (complete pooling)
+3. Estimate how much the average height varies between the cities. If the average height doesn't vary much, give estimates close to #2. If the average height varies a lot, give estimates close to #1 (partial pooling)
+
+Zero pooling tends to work well when you have a limited amount of effects you want to estimate, each with a good sample size (i.e. you don't need to borrow strength from other data points). Partial pooling tends to work well when you have a large number of effects you want to estimate, each with a small sample size (i.e. you need to borrow strength from other data points).
+
+Fixed effects are estimated with zero pooling. Random effects are estimated with partial pooling.
+
+With data that has a large number of clusters, the clustering need to be accounted for in the regression model. This is done by introducing a variable that uniquely identifies each cluster, and allows the cluster effect to be estimated (e.g. in Oslo people are 1% more likely to die than in the rest of Norway). If there are a large number of clusters with a small amount of people in each cluster, then the cluster variable should be estimated using partial pooling (i.e. random effects).
+
+In summary: Mixed effects regression should be used for grouped/clustered/matched data (and subsequently repeated measures/longitudinal data).
+
+### Conditional logistic regression
+
+Conditional logistic regression can also be used for matched data with a binary outcome, however, it is less flexible than mixed effects regression.
+
+## (TBD) Understanding the best practices for data files and project folders
+

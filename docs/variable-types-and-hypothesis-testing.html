@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Which Stats Method Should I Use?</title>
+  <meta name="description" content="A short course in learning which statistical methods should be applied where.">
+  <meta name="generator" content="bookdown 0.4.1 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Which Stats Method Should I Use?" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A short course in learning which statistical methods should be applied where." />
+  <meta name="github-repo" content="raubreywhite/which_stats_method" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Which Stats Method Should I Use?" />
+  
+  <meta name="twitter:description" content="A short course in learning which statistical methods should be applied where." />
+  
+
+<meta name="author" content="Richard White">
+
+
+<meta name="date" content="2017-08-16">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="chi-squared-t-tests-anova-and-simple-regression.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="/">Home</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Syllabus</a></li>
+<li class="chapter" data-level="2" data-path="variable-types-and-hypothesis-testing.html"><a href="variable-types-and-hypothesis-testing.html"><i class="fa fa-check"></i><b>2</b> Variable types and hypothesis testing</a><ul>
+<li class="chapter" data-level="2.1" data-path="variable-types-and-hypothesis-testing.html"><a href="variable-types-and-hypothesis-testing.html#continuous-variables"><i class="fa fa-check"></i><b>2.1</b> Continuous variables</a></li>
+<li class="chapter" data-level="2.2" data-path="variable-types-and-hypothesis-testing.html"><a href="variable-types-and-hypothesis-testing.html#binary-variables"><i class="fa fa-check"></i><b>2.2</b> Binary variables</a></li>
+<li class="chapter" data-level="2.3" data-path="variable-types-and-hypothesis-testing.html"><a href="variable-types-and-hypothesis-testing.html#categorical-variable"><i class="fa fa-check"></i><b>2.3</b> Categorical variable</a></li>
+<li class="chapter" data-level="2.4" data-path="variable-types-and-hypothesis-testing.html"><a href="variable-types-and-hypothesis-testing.html#censored-variables"><i class="fa fa-check"></i><b>2.4</b> Censored variables</a></li>
+<li class="chapter" data-level="2.5" data-path="variable-types-and-hypothesis-testing.html"><a href="variable-types-and-hypothesis-testing.html#count-variables"><i class="fa fa-check"></i><b>2.5</b> Count variables</a></li>
+<li class="chapter" data-level="2.6" data-path="variable-types-and-hypothesis-testing.html"><a href="variable-types-and-hypothesis-testing.html#independent-vs-dependent-variables"><i class="fa fa-check"></i><b>2.6</b> Independent vs Dependent variables</a></li>
+<li class="chapter" data-level="2.7" data-path="variable-types-and-hypothesis-testing.html"><a href="variable-types-and-hypothesis-testing.html#hypothesis-testing"><i class="fa fa-check"></i><b>2.7</b> Hypothesis testing</a></li>
+<li class="chapter" data-level="2.8" data-path="variable-types-and-hypothesis-testing.html"><a href="variable-types-and-hypothesis-testing.html#which-method-to-use"><i class="fa fa-check"></i><b>2.8</b> Which method to use?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html"><i class="fa fa-check"></i><b>3</b> Chi-Squared, T-tests, ANOVA, and Simple Regression</a><ul>
+<li class="chapter" data-level="3.1" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#identifying-when-chi-squaredfishers-exact-test-should-be-used"><i class="fa fa-check"></i><b>3.1</b> Identifying when chi-squared/fisher’s exact test should be used</a></li>
+<li class="chapter" data-level="3.2" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#one-sample-t-test"><i class="fa fa-check"></i><b>3.2</b> One sample t-test</a></li>
+<li class="chapter" data-level="3.3" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#two-sample-t-tests"><i class="fa fa-check"></i><b>3.3</b> Two sample t-tests</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#what-is-a-two-sample-t-test"><i class="fa fa-check"></i><b>3.3.1</b> What is a two sample t-test?</a></li>
+<li class="chapter" data-level="3.3.2" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#two-sample-paired-t-test"><i class="fa fa-check"></i><b>3.3.2</b> Two-sample paired t-test</a></li>
+<li class="chapter" data-level="3.3.3" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#two-sample-unpaired-t-test"><i class="fa fa-check"></i><b>3.3.3</b> Two-sample unpaired t-test</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#anova"><i class="fa fa-check"></i><b>3.4</b> ANOVA</a></li>
+<li class="chapter" data-level="3.5" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#regression-in-general"><i class="fa fa-check"></i><b>3.5</b> Regression in general</a></li>
+<li class="chapter" data-level="3.6" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#linear-regression"><i class="fa fa-check"></i><b>3.6</b> Linear regression</a></li>
+<li class="chapter" data-level="3.7" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#identifying-the-similarities-between-t-tests-anova-and-linear-regression"><i class="fa fa-check"></i><b>3.7</b> Identifying the similarities between t-tests, ANOVA, and linear regression</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#two-sample-unpaired-t-tests-are-anova-with-only-two-groups"><i class="fa fa-check"></i><b>3.7.1</b> Two-sample unpaired t-tests are ANOVA with only two groups</a></li>
+<li class="chapter" data-level="3.7.2" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#two-sample-unpaired-t-tests-are-linear-regressions-with-a-binary-01-exposure"><i class="fa fa-check"></i><b>3.7.2</b> Two-sample unpaired t-tests are linear regressions with a binary (0/1) exposure</a></li>
+<li class="chapter" data-level="3.7.3" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#anova-is-a-linear-regression-with-a-categorical-exposure"><i class="fa fa-check"></i><b>3.7.3</b> ANOVA is a linear regression with a categorical exposure</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#logistic-regression-models"><i class="fa fa-check"></i><b>3.8</b> Logistic regression models</a></li>
+<li class="chapter" data-level="3.9" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#poissonnegative-binomial-models-should-be-used"><i class="fa fa-check"></i><b>3.9</b> Poisson/negative binomial models should be used</a></li>
+<li class="chapter" data-level="3.10" data-path="chi-squared-t-tests-anova-and-simple-regression.html"><a href="chi-squared-t-tests-anova-and-simple-regression.html#cox-regression-models-should-be-used"><i class="fa fa-check"></i><b>3.10</b> Cox regression models should be used</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="complicated-regression.html"><a href="complicated-regression.html"><i class="fa fa-check"></i><b>4</b> Complicated regression</a><ul>
+<li class="chapter" data-level="4.1" data-path="complicated-regression.html"><a href="complicated-regression.html#what-is-data-with-dependencies"><i class="fa fa-check"></i><b>4.1</b> What is data with dependencies</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="complicated-regression.html"><a href="complicated-regression.html#what-is-independent-data"><i class="fa fa-check"></i><b>4.1.1</b> What is independent data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="complicated-regression.html"><a href="complicated-regression.html#what-is-data-with-dependencies-1"><i class="fa fa-check"></i><b>4.1.2</b> What is data with dependencies</a></li>
+<li class="chapter" data-level="4.1.3" data-path="complicated-regression.html"><a href="complicated-regression.html#repeated-measureslongitudinal-data"><i class="fa fa-check"></i><b>4.1.3</b> Repeated measures/longitudinal data</a></li>
+<li class="chapter" data-level="4.1.4" data-path="complicated-regression.html"><a href="complicated-regression.html#groupedclustered-data"><i class="fa fa-check"></i><b>4.1.4</b> Grouped/clustered data</a></li>
+<li class="chapter" data-level="4.1.5" data-path="complicated-regression.html"><a href="complicated-regression.html#matched-data"><i class="fa fa-check"></i><b>4.1.5</b> Matched data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="complicated-regression.html"><a href="complicated-regression.html#analysing-data-with-dependencies"><i class="fa fa-check"></i><b>4.2</b> Analysing data with dependencies</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="complicated-regression.html"><a href="complicated-regression.html#mixed-effects-regression"><i class="fa fa-check"></i><b>4.2.1</b> Mixed effects regression</a></li>
+<li class="chapter" data-level="4.2.2" data-path="complicated-regression.html"><a href="complicated-regression.html#identifying-when-conditional-logistic-regression-models-should-be-used"><i class="fa fa-check"></i><b>4.2.2</b> Identifying when conditional logistic regression models should be used</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="complicated-regression.html"><a href="complicated-regression.html#tbd-understanding-the-different-imputation-methods-used-when-lab-data-is-below-the-limit-of-detection-lod"><i class="fa fa-check"></i><b>4.3</b> (TBD) Understanding the different imputation methods used when lab data is below the limit of detection (LOD)</a></li>
+<li class="chapter" data-level="4.4" data-path="complicated-regression.html"><a href="complicated-regression.html#tbd-understanding-the-best-practices-for-data-files-and-project-folders"><i class="fa fa-check"></i><b>4.4</b> (TBD) Understanding the best practices for data files and project folders</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Which Stats Method Should I Use?</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="variable-types-and-hypothesis-testing" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Variable types and hypothesis testing</h1>
+<div id="continuous-variables" class="section level2">
+<h2><span class="header-section-number">2.1</span> Continuous variables</h2>
+<p>A variable is continuous there is a meaningful “distance” between values.</p>
+<p>For example:</p>
+<ul>
+<li>Temperature</li>
+<li>Weight</li>
+<li>Height</li>
+<li>BMI</li>
+<li>Blood pressure</li>
+</ul>
+<p>Provide five of your own examples:</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="binary-variables" class="section level2">
+<h2><span class="header-section-number">2.2</span> Binary variables</h2>
+<p>A variable is binary if it can only hold two values.</p>
+<p>For example:</p>
+<ul>
+<li>0 or 1</li>
+<li>True or false</li>
+<li>Male or female</li>
+<li>Sick or healthy</li>
+<li>Born in Norway vs Born outside of Norway</li>
+</ul>
+<p>Provide five of your own examples:</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="categorical-variable" class="section level2">
+<h2><span class="header-section-number">2.3</span> Categorical variable</h2>
+<p>A variable is categorical if there is no meaningful “distance” between values.</p>
+<p>For example:</p>
+<ul>
+<li>Sick or healthy</li>
+<li>Born in Norway vs Born outside of Norway</li>
+<li>Cancer stage (I, II, III, or IV)</li>
+<li>BMI category (underweight, normal, or overweight)</li>
+</ul>
+<p>Provide five of your own examples:</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="censored-variables" class="section level2">
+<h2><span class="header-section-number">2.4</span> Censored variables</h2>
+<p>Censored variables are a subset of continuous variables. They are artificially cutoff (“censored”) at some point.</p>
+<p>For example:</p>
+<ul>
+<li>Height – if everyone over 175cm is recorded as “175+”</li>
+<li>Age – if everyone under 10 years old is recorded as “&lt;=10”</li>
+<li>Time alive since receiving illness diagnosis if there is loss to followup (i.e. we know that the person has lived at least 4 years before we lost track of them)</li>
+</ul>
+<p>Provide five of your own examples:</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="count-variables" class="section level2">
+<h2><span class="header-section-number">2.5</span> Count variables</h2>
+<p>Count variables are a subset of continuous variables. They can only have integer values (e.g. 0, 1, 2, 3).</p>
+<p>For example:</p>
+<ul>
+<li>Number of cars that use the parking lot in a day</li>
+<li>Number of influenza patients who use the hospital every day</li>
+<li>Number of tuberculosis patients who are screened every year</li>
+</ul>
+<p>Provide five of your own examples:</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="independent-vs-dependent-variables" class="section level2">
+<h2><span class="header-section-number">2.6</span> Independent vs Dependent variables</h2>
+<p>An independent variable is often called an exposure or predictor variable. In an experiment, this variable is manipulated by the researcher.</p>
+<p>A dependent variable is often called the outcome. In research, we generally want to see if (the following all mean the same thing):</p>
+<ul>
+<li>The dependent variable is dependent on the independent variable</li>
+<li>The predictor variable predicts the outcome.</li>
+<li>The exposure affects the outcome</li>
+</ul>
+<p>For ease of understanding, we will use the terms “outcome” and “exposure” for the rest of this course.</p>
+</div>
+<div id="hypothesis-testing" class="section level2">
+<h2><span class="header-section-number">2.7</span> Hypothesis testing</h2>
+<p>In science, we are interested in testing hypotheses. Statistics allows us to formally test our hypotheses.</p>
+<p>In statistical testing we have a <strong>null</strong> hypothesis (<span class="math inline">\(\text{H}_0\)</span>) and an <strong>alternative</strong> hypothesis (<span class="math inline">\(\text{H}_1\)</span>). We assume the null hypothesis is true and try to find the probability of what we have observed (or something more extreme). If our observations are very unlikely (assuming the null hypothesis is true) then we reject the null hypothesis in favor of the alternative hypothesis.</p>
+<p>For example:</p>
+<p><span class="math inline">\(\text{H}_0\)</span>: It is summer</p>
+<p><span class="math inline">\(\text{H}_1\)</span>: It is not summer</p>
+<p>Our observed data for today is an average temperature of -20C today. Assuming it is summer, how likely is it that today’s average temperature will be -20C? Not very likely! We therefore reject <span class="math inline">\(\text{H}_0\)</span> (“it is summer”) in favor of <span class="math inline">\(\text{H}_1\)</span> (“it is not summer”). That is, we conclude that it is not summer today.</p>
+</div>
+<div id="which-method-to-use" class="section level2">
+<h2><span class="header-section-number">2.8</span> Which method to use?</h2>
+<p>Deciding on the appropriate statistical method is (in principle) fairly easy. You just look at the:</p>
+<ul>
+<li>Outcome type (continuous, binary, categorical, censored, count)</li>
+<li>Exposure (type)</li>
+<li>Dependencies in the data</li>
+</ul>
+<p>and then essentially use a flowchart.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chi-squared-t-tests-anova-and-simple-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/raubreywhite/which_stats_method/edit/master/01-intro.Rmd",
+"text": "Edit"
+},
+"download": ["which-stats-method.pdf"],
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

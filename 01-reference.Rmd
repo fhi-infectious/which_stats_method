@@ -1,0 +1,326 @@
+# Reference
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=7}
+library(data.table)
+library(ggplot2)
+data <- vector("list",100)
+data[[1]] <- data.frame(
+  "Method"="Chi-Squared",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="No",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="No",
+  "Binary"="No",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="No",
+  "Binary"="No",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="No",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="No"
+  )
+
+data[[2]] <- data.frame(
+  "Method"="One Sample T-Test",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="No",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="Yes",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="No",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="No"
+  )
+
+data[[3]] <- data.frame(
+  "Method"="Two Sample Paired T-Test",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="No",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="Yes",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="No",
+  "Binary"="Yes",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="Yes"
+  )
+
+data[[4]] <- data.frame(
+  "Method"="Two Sample Unpaired T-Test",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="No",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="Yes",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="No",
+  "Binary"="Yes",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="No"
+  )
+
+data[[5]] <- data.frame(
+  "Method"="ANOVA",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="No",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="Yes",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="No",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="No",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="No"
+  )
+
+data[[6]] <- data.frame(
+  "Method"="Linear regression",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="Yes",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="Yes",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="Yes",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="No"
+  )
+
+data[[7]] <- data.frame(
+  "Method"="Logistic regression",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="Yes",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="No",
+  "Binary"="Yes",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="Yes",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="No"
+  )
+
+data[[8]] <- data.frame(
+  "Method"="Poisson regression",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="Yes",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="No",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="Yes",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="No"
+  )
+
+data[[9]] <- data.frame(
+  "Method"="Negative-binomial regression",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="Yes",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="No",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="Yes",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data - Dependencies"="No"
+  )
+
+data[[10]] <- data.frame(
+  "Method"="Cox regression",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="Yes",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="No",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="Yes",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="Yes",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "***DEPENDENCIES***"="No"
+  )
+
+data <- rbindlist(data)
+variableNames <- c(
+  "Method",
+  "***AIM***",
+  "Hypothesis Testing",
+  "Effect estimation",
+  " ",
+  "***OUTCOME***",
+  "Continuous",
+  "Binary",
+  "Categorical",
+  "Censored",
+  "Count",
+  "  ",
+  "***EXPOSURE***",
+  " Continuous",
+  " Binary",
+  " Categorical",
+  " Censored",
+  " Count",
+  "   ",
+  "***DEPENDENCIES***",
+  "Data")
+setnames(data,variableNames)
+data <- melt.data.table(data,id=c("Method"),variable.factor = FALSE)
+data[,variable:=factor(variable,levels=rev(variableNames))]
+data[,value:=factor(value,levels=c("Yes","No"," "))]
+
+q <- ggplot(data,aes(x=Method,y=variable))
+q <- q + geom_tile(alpha=0)
+q <- q + geom_tile(data=data[value!=" "],alpha=0.8,aes(fill=value),colour="black")
+q <- q + scale_x_discrete("")
+q <- q + scale_y_discrete("")
+q <- q + scale_fill_manual("",values=c("green","white"))
+q <- q + theme(axis.text.x= element_text(angle=90,hjust=1,vjust=0.5))
+q <- q + theme(panel.background = element_rect(fill = "gray75", colour = "white"))
+q <- q + theme(panel.grid.major = element_blank())
+q <- q + theme(axis.ticks=element_blank())
+q
+```

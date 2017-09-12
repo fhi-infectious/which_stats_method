@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="solutions.html">
-
+<link rel="prev" href="reference.html">
+<link rel="next" href="simple-hypothesis-testing-chi-squared-t-tests-and-anova.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -194,17 +194,93 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="variable-types" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Variable Types</h1>
+<div id="continuous-variables" class="section level2">
+<h2><span class="header-section-number">3.1</span> Continuous Variables</h2>
+<p>A variable is continuous there is a meaningful “distance” between values.</p>
+<p>For example:</p>
+<ul>
+<li>Temperature</li>
+<li>Weight</li>
+<li>Height</li>
+<li>BMI</li>
+<li>Blood pressure</li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="binary-variables" class="section level2">
+<h2><span class="header-section-number">3.2</span> Binary Variables</h2>
+<p>A variable is binary if it can only hold two values.</p>
+<p>For example:</p>
+<ul>
+<li>0 or 1</li>
+<li>True or false</li>
+<li>Male or female</li>
+<li>Sick or healthy</li>
+<li>Born in Norway vs Born outside of Norway</li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="categorical-variable" class="section level2">
+<h2><span class="header-section-number">3.3</span> Categorical Variable</h2>
+<p>A variable is categorical if there is no meaningful “distance” between values.</p>
+<p>For example:</p>
+<ul>
+<li>Sick or healthy</li>
+<li>Born in Norway vs Born outside of Norway</li>
+<li>Cancer stage (I, II, III, or IV)</li>
+<li>BMI category (underweight, normal, or overweight)</li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="censored-variables" class="section level2">
+<h2><span class="header-section-number">3.4</span> Censored Variables</h2>
+<p>Censored variables are a subset of continuous variables. They are artificially cutoff (“censored”) at some point.</p>
+<p>For example:</p>
+<ul>
+<li>Height – if everyone over 175cm is recorded as “175+”</li>
+<li>Age – if everyone under 10 years old is recorded as “&lt;=10”</li>
+<li>Time alive since receiving illness diagnosis if there is loss to followup (i.e. we know that the person has lived at least 4 years before we lost track of them)</li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="count-variables" class="section level2">
+<h2><span class="header-section-number">3.5</span> Count Variables</h2>
+<p>Count variables are a subset of continuous variables. They can only have integer values (e.g. 0, 1, 2, 3).</p>
+<p>For example:</p>
+<ul>
+<li>Number of cars that use the parking lot in a day</li>
+<li>Number of influenza patients who use the hospital every day</li>
+<li>Number of tuberculosis patients who are screened every year</li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="independent-versus-dependent-variables" class="section level2">
+<h2><span class="header-section-number">3.6</span> Independent Versus Dependent Variables</h2>
+<p>An independent variable is often called an exposure or predictor variable. In an experiment, this variable is manipulated by the researcher.</p>
+<p>A dependent variable is often called the outcome. In research, we generally want to see if (the following all mean the same thing):</p>
+<ul>
+<li>The dependent variable is dependent on the independent variable</li>
+<li>The predictor variable predicts the outcome.</li>
+<li>The exposure affects the outcome</li>
+</ul>
+<p>For ease of understanding, we will use the terms “outcome” and “exposure” for the rest of this course.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="solutions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="reference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="simple-hypothesis-testing-chi-squared-t-tests-and-anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -233,7 +309,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/raubreywhite/which_stats_method/edit/master/09-references.Rmd",
+"link": "https://github.com/raubreywhite/which_stats_method/edit/master/02-variables.Rmd",
 "text": "Edit"
 },
 "download": ["which-stats-method.pdf"],
