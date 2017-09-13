@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Which Stats Method Should I Use?</title>
   <meta name="description" content="A short course in learning which statistical methods should be applied where.">
-  <meta name="generator" content="bookdown 0.4.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="Which Stats Method Should I Use?" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Richard White">
 
 
-<meta name="date" content="2017-09-12">
+<meta name="date" content="2017-09-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -171,10 +171,18 @@
 <li class="chapter" data-level="7" data-path="examples-1.html"><a href="examples-1.html"><i class="fa fa-check"></i><b>7</b> Examples</a><ul>
 <li class="chapter" data-level="7.1" data-path="examples-1.html"><a href="examples-1.html#poisons-information-center"><i class="fa fa-check"></i><b>7.1</b> Poisons Information Center</a></li>
 <li class="chapter" data-level="7.2" data-path="examples-1.html"><a href="examples-1.html#norwegian-water-pipes"><i class="fa fa-check"></i><b>7.2</b> Norwegian Water Pipes</a></li>
+<li class="chapter" data-level="7.3" data-path="examples-1.html"><a href="examples-1.html#early-warning-system-ews-for-waterborne-outbreaks-part-1"><i class="fa fa-check"></i><b>7.3</b> Early warning system (EWS) for waterborne outbreaks (part 1)</a></li>
+<li class="chapter" data-level="7.4" data-path="examples-1.html"><a href="examples-1.html#early-warning-system-ews-for-waterborne-outbreaks-part-2"><i class="fa fa-check"></i><b>7.4</b> Early warning system (EWS) for waterborne outbreaks (part 2)</a></li>
+<li class="chapter" data-level="7.5" data-path="examples-1.html"><a href="examples-1.html#incidents-in-the-water-supply-system-and-illness"><i class="fa fa-check"></i><b>7.5</b> Incidents in the water supply system and illness</a></li>
+<li class="chapter" data-level="7.6" data-path="examples-1.html"><a href="examples-1.html#compliance-with-boil-water-advisories-and-perception-of-risks"><i class="fa fa-check"></i><b>7.6</b> Compliance with boil water advisories and perception of risks</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i><b>8</b> Solutions</a><ul>
 <li class="chapter" data-level="8.1" data-path="solutions.html"><a href="solutions.html#poisons-information-center-1"><i class="fa fa-check"></i><b>8.1</b> Poisons Information Center</a></li>
 <li class="chapter" data-level="8.2" data-path="solutions.html"><a href="solutions.html#norwegian-water-pipes-1"><i class="fa fa-check"></i><b>8.2</b> Norwegian Water Pipes</a></li>
+<li class="chapter" data-level="8.3" data-path="solutions.html"><a href="solutions.html#early-warning-system-ews-for-waterborne-outbreaks-part-1-1"><i class="fa fa-check"></i><b>8.3</b> Early warning system (EWS) for waterborne outbreaks (part 1)</a></li>
+<li class="chapter" data-level="8.4" data-path="solutions.html"><a href="solutions.html#early-warning-system-ews-for-waterborne-outbreaks-part-2-1"><i class="fa fa-check"></i><b>8.4</b> Early warning system (EWS) for waterborne outbreaks (part 2)</a></li>
+<li class="chapter" data-level="8.5" data-path="solutions.html"><a href="solutions.html#incidents-in-the-water-supply-system-and-illness-1"><i class="fa fa-check"></i><b>8.5</b> Incidents in the water supply system and illness</a></li>
+<li class="chapter" data-level="8.6" data-path="solutions.html"><a href="solutions.html#compliance-with-boil-water-advisories-and-perception-of-risks-1"><i class="fa fa-check"></i><b>8.6</b> Compliance with boil water advisories and perception of risks</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
@@ -248,6 +256,82 @@
 <p><strong>Appropriate Method</strong>: Negative-binomial regression</p>
 <p><strong>Example STATA code</strong>:</p>
 <pre><code>nbreg hoursInterrupted pipesAsbestos pipesIronSteel pipesPVC ... pipes1910 ...</code></pre>
+</div>
+<div id="early-warning-system-ews-for-waterborne-outbreaks-part-1-1" class="section level2">
+<h2><span class="header-section-number">8.3</span> Early warning system (EWS) for waterborne outbreaks (part 1)</h2>
+<p>Scenario:</p>
+<ul>
+<li>NorSySS is a syndromic surveillance system for infectious diseases, run by the NIPH.</li>
+<li>The system is based on national ICPC coded consultation data from general practice in Norway.</li>
+<li>We want to study to what extent NorSySS can serve as an early warning system for local waterborne outbreaks by alerting us to increases in consultation rates for syndromes indicative of gastrointestinal diseases.<br />
+</li>
+<li>Retrospective syndrome data (number of gastritis cases, per week, for each municipality) from NorSySS will be aligned with outbreak data (outbreak=yes/no) from the national web-based outbreak rapid alert system (Vesuv) for the period 2006-2017.</li>
+</ul>
+<p>Question: Is there an association between “recorded outbreak” and “number of gastritis cases”</p>
+<p><strong>Aim</strong>: Hypothesis testing</p>
+<p><strong>Outcome</strong>: Binary (recorded outbreak)</p>
+<p><strong>Exposure</strong>: Count (number of gastritis cases)</p>
+<p><strong>Parametric assumptions</strong>: None</p>
+<p><strong>Dependencies</strong>: Yes (longitudinal data by municipality)</p>
+<p><strong>Appropriate Method</strong>: Mixed effects logistic regression</p>
+</div>
+<div id="early-warning-system-ews-for-waterborne-outbreaks-part-2-1" class="section level2">
+<h2><span class="header-section-number">8.4</span> Early warning system (EWS) for waterborne outbreaks (part 2)</h2>
+<p>Scenario:</p>
+<ul>
+<li>We have weekly data on water quality from water works (e.g. pH, turbidity)</li>
+<li>We have weekly number of gastritis cases, per week, for each municipality</li>
+<li>We hope to increase the knowledge about causes of waterborne outbreaks and to develop an improved surveillance system for early detection of future outbreaks.</li>
+</ul>
+<p>Question: Is there an association between “weekly number of gastritis cases” and “water quality from the water works”</p>
+<p><strong>Aim</strong>: Hypothesis testing</p>
+<p><strong>Outcome</strong>: Count (number of gastritis cases)</p>
+<p><strong>Exposure</strong>: Continuous (pH, turbidity)</p>
+<p><strong>Parametric assumptions</strong>: None</p>
+<p><strong>Dependencies</strong>: Yes (longitudinal data by municipality)</p>
+<p><strong>Appropriate Method</strong>: Mixed effects negative-binomial regression</p>
+</div>
+<div id="incidents-in-the-water-supply-system-and-illness-1" class="section level2">
+<h2><span class="header-section-number">8.5</span> Incidents in the water supply system and illness</h2>
+<p>Scenario:</p>
+<ul>
+<li>Data from the water works operation (pH, turbidity) will be linked to health outcome among recipients of the drinking water.</li>
+<li>The study will be a prospective cohort study, with data collected among a random selection of water works.</li>
+<li>Data from the recruited water works will be collected in the period autumn 2017 and the 12 following months.</li>
+<li>Approximately 350 water works will be recruited to provide monthly data on hygienic critical points related to operation and maintenance of the water supply system.</li>
+<li>In parallel, a cohort of approximately 9000 persons, served by water from the recruited water works, will submit monthly reports on symptoms that may indicate gastrointestinal illness.</li>
+<li>The data collection will start in the autumn of 2017 and continue for 12 months.</li>
+</ul>
+<p>Question: Is water quality a risk factor for getting sick?</p>
+<p><strong>Aim</strong>: Hypothesis testing</p>
+<p><strong>Outcome</strong>: Binary (sick yes/no)</p>
+<p><strong>Exposure</strong>: Continuous (pH, turbidity)</p>
+<p><strong>Parametric assumptions</strong>: None</p>
+<p><strong>Dependencies</strong>: Yes (longitudinal data by person, clustered by waterwork and/or municipality)</p>
+<p><strong>Appropriate Method</strong>: Mixed effects logistic regression</p>
+</div>
+<div id="compliance-with-boil-water-advisories-and-perception-of-risks-1" class="section level2">
+<h2><span class="header-section-number">8.6</span> Compliance with boil water advisories and perception of risks</h2>
+<p>Scenario:</p>
+<ul>
+<li>In this study, the compliance and perception of risks among the public with boil water advisories (BWAs) will be examined.</li>
+<li>Although BWAs is a common practice among water utilities, a meta-study suggest that there is limited information and studies on the compliance of BWAs.</li>
+<li>This part, the compliance and perception of risks will be done by studying the perception of and adherence to BWAs among the consumers of drinking water in Bærum municipality.</li>
+<li>Even though the drinking water in Bærum is considered to have good quality, Bærum – like many water works – experience situations of pressure drops due to breaks and maintenance.</li>
+<li>Research has shown that these situations may lead to an increased risk of gastrointestinal infections, and due to this the municipality of Bærum has issued a precautionary BWAs to the affected consumers with every water outage during the last 5-6 years.</li>
+<li>Every year, some 12,000-22,000 consumers have received a precautionary BWA.</li>
+<li>The purpose of these precautionary BWAs is to prevent health consequences caused by possible contamination of water. However, we know little about the consumer’s knowledge about why they receive these BWAs, as well as the way the consumers perceive and adhere to these BWAs.</li>
+<li>This is a cross-sectional study.</li>
+<li>A web-survey will be presented to a randomly selected sample of consumers who received a BWA in Bærum in 2017.</li>
+<li>The web-survey asks about adherence (yes/no) and demographics (e.g. age, sex, income)</li>
+</ul>
+<p>Question: Estimate adherence by demographics (and identify if it differs by demographics)</p>
+<p><strong>Aim</strong>: Estimation and hypothesis testing</p>
+<p><strong>Outcome</strong>: Binary (adhberence yes/no)</p>
+<p><strong>Exposure</strong>: Binary (sex), Categorical (age, income)</p>
+<p><strong>Parametric assumptions</strong>: None</p>
+<p><strong>Dependencies</strong>: No (“randomly selected sample of consumers”)</p>
+<p><strong>Appropriate Method</strong>: Logistic regression</p>
 
 </div>
 </div>

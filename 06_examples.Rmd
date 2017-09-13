@@ -59,3 +59,94 @@ Question: Is there an association between "interuption in water delivery" and "t
 
 **Dependencies**: 
 
+## Early warning system (EWS) for waterborne outbreaks (part 1)
+
+Scenario:
+
+- NorSySS is a syndromic surveillance system for infectious diseases, run by the NIPH. 
+- The system is based on national ICPC coded consultation data from general practice in Norway.
+- We want to study to what extent NorSySS can serve as an early warning system for local waterborne outbreaks by alerting us to increases in consultation rates for syndromes indicative of gastrointestinal diseases.  
+- Retrospective syndrome data (number of gastritis cases, per week, for each municipality) from NorSySS will be aligned with outbreak data (outbreak=yes/no) from the national web-based outbreak rapid alert system (Vesuv) for the period 2006-2017.
+
+Question: Is there an association between "recorded outbreak" and "number of gastritis cases"
+
+**Aim**: 
+
+**Outcome**: 
+
+**Exposure**: 
+
+**Parametric assumptions**: 
+
+**Dependencies**: 
+ 
+## Early warning system (EWS) for waterborne outbreaks (part 2)
+
+Scenario:
+
+- We have weekly data on water quality from water works (e.g. pH, turbidity)
+- We have weekly number of gastritis cases, per week, for each municipality
+- We hope to increase the knowledge about causes of waterborne outbreaks and to develop an improved surveillance system for early detection of future outbreaks.
+
+Question: Is there an association between "weekly number of gastritis cases" and "water quality from the water works"
+
+**Aim**: 
+
+**Outcome**: 
+
+**Exposure**: 
+
+**Parametric assumptions**: 
+
+**Dependencies**: 
+ 
+## Incidents in the water supply system and illness
+
+Scenario:
+
+- Data from the water works operation (pH, turbidity) will be linked to health outcome among recipients of the drinking water.
+- The study will be a prospective cohort study, with data collected among a random selection of water works. 
+- Data from the recruited water works will be collected in the period autumn 2017 and the 12 following months.
+- Approximately 350 water works will be recruited to provide monthly data on hygienic critical points related to operation and maintenance of the water supply system.
+- In parallel, a cohort of approximately 9000 persons, served by water from the recruited water works, will submit monthly reports on symptoms that may indicate gastrointestinal illness.
+- The data collection will start in the autumn of 2017 and continue for 12 months.
+
+Question: Is water quality a risk factor for getting sick?
+
+**Aim**: 
+
+**Outcome**: 
+
+**Exposure**: 
+
+**Parametric assumptions**: 
+
+**Dependencies**: 
+ 
+## Compliance with boil water advisories and perception of risks
+
+Scenario:
+
+- In this study, the compliance and perception of risks among the public with boil water advisories (BWAs) will be examined.
+- Although BWAs is a common practice among water utilities, a meta-study suggest that there is limited information and studies on the compliance of BWAs.
+- This part, the compliance and perception of risks will be done by studying the perception of and adherence to BWAs among the consumers of drinking water in Bærum municipality.
+- Even though the drinking water in Bærum is considered to have good quality, Bærum – like many water works – experience situations of pressure drops due to breaks and maintenance.
+- Research has shown that these situations may lead to an increased risk of gastrointestinal infections, and due to this the municipality of Bærum has issued a precautionary BWAs to the affected consumers with every water outage during the last 5-6 years.
+- Every year, some 12,000-22,000 consumers have received a precautionary BWA.
+- The purpose of these precautionary BWAs is to prevent health consequences caused by possible contamination of water. However, we know little about the consumer’s knowledge about why they receive these BWAs, as well as the way the consumers perceive and adhere to these BWAs.
+- This is a cross-sectional study.
+- A web-survey will be presented to a randomly selected sample of consumers who received a BWA i Bærum in 2017.
+- The web-survey asks about adherence (yes/no) and demographics (e.g. age, sex, income)
+
+Question: Estimate adherence by demographics (and identify if it differs by demographics)
+
+**Aim**: 
+
+**Outcome**: 
+
+**Exposure**: 
+
+**Parametric assumptions**: 
+
+**Dependencies**: 
+ 
