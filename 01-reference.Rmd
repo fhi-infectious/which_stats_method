@@ -284,6 +284,118 @@ data[[10]] <- data.frame(
   "***DEPENDENCIES***"="No"
   )
 
+data[[11]] <- data.frame(
+  "Method"="Mixed effects linear regression",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="Yes",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="Yes",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="Yes",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="Yes"
+  )
+
+data[[12]] <- data.frame(
+  "Method"="Mixed effects logistic regression",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="Yes",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="No",
+  "Binary"="Yes",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="No",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="Yes",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="Yes"
+  )
+
+data[[13]] <- data.frame(
+  "Method"="Mixed effects Poisson regression",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="Yes",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="No",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="Yes",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data"="Yes"
+  )
+
+data[[14]] <- data.frame(
+  "Method"="Mixed effects negative-binomial regression",
+  
+  "***AIM***"=" ",
+  "Hypothesis Testing"="Yes",
+  "Effect estimation"="Yes",
+  
+  " "=" ",
+  "***OUTCOME***"=" ",
+  "Continuous"="No",
+  "Binary"="No",
+  "Categorical"="No",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "  "=" ",
+  "***EXPOSURE***"=" ",
+  "Continuous"="Yes",
+  "Binary"="Yes",
+  "Categorical"="Yes",
+  "Censored"="No",
+  "Count"="Yes",
+  
+  "   "=" ",
+  "***DEPENDENCIES***"=" ",
+  "Data - Dependencies"="Yes"
+  )
+
 data <- rbindlist(data)
 variableNames <- c(
   "Method",

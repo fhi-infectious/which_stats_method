@@ -63,6 +63,20 @@ Or rephrased:
 $$\text{H}_0: \text{The average height of men is equal to 180cm}$$
 $$\text{H}_1: \text{The average height of men is not equal to 180cm}$$
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=7}
+library(data.table)
+library(ggplot2)
+
+data <- data.frame(x=rnorm(1000,mean=180,sd=10))
+q <- ggplot(data,aes(x=x))
+q <- q + geom_histogram(alpha=0.5,colour="black")
+q <- q + geom_vline(xintercept=180,colour="red")
+q <- q + scale_x_continuous("Height (cm)")
+q <- q + scale_y_continuous("Number of people")
+q
+```
+
+
 ### Aim/Outcome/Exposure/Parametric/Dependencies
 
 **Aim**: Hypothesis testing (test if the mean of a continuous variable differs from a specified value)
