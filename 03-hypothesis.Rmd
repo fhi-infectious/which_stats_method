@@ -63,7 +63,7 @@ Or rephrased:
 $$\text{H}_0: \text{The average height of men is equal to 180cm}$$
 $$\text{H}_1: \text{The average height of men is not equal to 180cm}$$
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=7}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(data.table)
 library(ggplot2)
 
@@ -96,12 +96,38 @@ $\rightarrow$ Testing if the average BMI of Norwegians is equal to 23
 $$H_0: \mu_{\text{bmi}} = 23$$
 $$H_1: \mu_{\text{bmi}} \ne 23$$
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+data <- data.frame(x=rnorm(1000,mean=27,sd=3))
+q <- ggplot(data,aes(x=x))
+q <- q + geom_histogram(alpha=0.5,colour="black")
+q <- q + geom_vline(xintercept=23,colour="red")
+q <- q + scale_x_continuous("BMI")
+q <- q + scale_y_continuous("Number of people")
+q
+```
+
 ### Example 2
 
 $\rightarrow$ Testing if the average pH of tap water is equal to 7
 
 $$H_0: \mu_{\text{pH}} = 7$$
 $$H_1: \mu_{\text{pH}} \ne 7$$
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+data <- data.frame(x=rnorm(1000,mean=7,sd=1))
+q <- ggplot(data,aes(x=x))
+q <- q + geom_histogram(alpha=0.5,colour="black")
+q <- q + geom_vline(xintercept=7,colour="red")
+q <- q + scale_x_continuous("pH")
+q <- q + scale_y_continuous("Number of water samples")
+q
+```
 
 ### Example 3
 
@@ -163,12 +189,38 @@ $\rightarrow$ Testing if there is a difference in blood pressure before and afte
 $$\text{H}_0: \mu_{\text{BP after}-\text{BP before}} = 0$$
 $$\text{H}_1: \mu_{\text{BP after}-\text{BP before}} \ne 0$$
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+data <- data.frame(x=rnorm(1000,mean=-2,sd=3))
+q <- ggplot(data,aes(x=x))
+q <- q + geom_histogram(alpha=0.5,colour="black")
+q <- q + geom_vline(xintercept=0,colour="red")
+q <- q + scale_x_continuous("BP after - BP before")
+q <- q + scale_y_continuous("Number of people")
+q
+```
+
 ### Example 2
 
 $\rightarrow$ Testing if there is a difference in mouse DNA damage before and after irradiating (measured on the same mouse)
 
 $$\text{H}_0: \mu_{\text{DNA damage after}-\text{DNA damage before}} = 0$$
 $$\text{H}_1: \mu_{\text{DNA damage after}-\text{DNA damage before}} \ne 0$$
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+data <- data.frame(x=rnorm(1000,mean=10,sd=3))
+q <- ggplot(data,aes(x=x))
+q <- q + geom_histogram(alpha=0.5,colour="black")
+q <- q + geom_vline(xintercept=0,colour="red")
+q <- q + scale_x_continuous("DNA damage after - DNA damage before")
+q <- q + scale_y_continuous("Number of people")
+q
+```
 
 ### Example 3
 
@@ -210,6 +262,21 @@ Or rephrased:
 $$\text{H}_0: \text{The average height of men is equal to the average height of women}$$
 $$\text{H}_1: \text{The average height of men is not equal to the average height of women}$$
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+data1 <- data.frame(x=rnorm(1000,mean=160,sd=10), group="Women", stringsAsFactors = F)
+data2 <- data.frame(x=rnorm(1000,mean=180,sd=10), group="Men", stringsAsFactors = F)
+data <- rbind(data1,data2)
+q <- ggplot(data,aes(x=x,fill=group))
+q <- q + geom_histogram(alpha=0.5,colour="black",pos="dodge")
+q <- q + scale_x_continuous("Height (cm)")
+q <- q + scale_y_continuous("Number of people")
+q <- q + scale_fill_brewer("",palette="Set1")
+q
+```
+
 ### Aim/Outcome/Exposure/Parametric/Dependencies
 
 **Aim**: Hypothesis testing (test if the mean of a continuous variable differs between $\text{group}_1$ and $\text{group}_2$)
@@ -229,12 +296,42 @@ $\rightarrow$ Testing if the average blood pressure in people who didn't receive
 $$\text{H}_0: \mu_{\text{BP treatment}} = \mu_{\text{BP no treatment}}$$
 $$\text{H}_1: \mu_{\text{BP treatment}} \ne \mu_{\text{BP no treatment}}$$
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+data1 <- data.frame(x=rnorm(1000,mean=130,sd=10), group="No treatment", stringsAsFactors = F)
+data2 <- data.frame(x=rnorm(1000,mean=120,sd=10), group="Received treatment", stringsAsFactors = F)
+data <- rbind(data1,data2)
+q <- ggplot(data,aes(x=x,fill=group))
+q <- q + geom_histogram(alpha=0.5,colour="black",pos="dodge")
+q <- q + scale_x_continuous("BP")
+q <- q + scale_y_continuous("Number of people")
+q <- q + scale_fill_brewer("",palette="Set1")
+q
+```
+
 ### Example 2
 
 $\rightarrow$ Testing if the average DNA damage in mice that weren't irradiated is different from mice that were irradiated
 
 $$\text{H}_0: \mu_{\text{DNA radiation}} = \mu_{\text{DNA no radiation}}$$
 $$\text{H}_1: \mu_{\text{DNA radiation}} \ne \mu_{\text{DNA no radiation}}$$
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+data1 <- data.frame(x=rnorm(1000,mean=200,sd=10), group="Irradiated", stringsAsFactors = F)
+data2 <- data.frame(x=rnorm(1000,mean=10,sd=10), group="Not irradiated", stringsAsFactors = F)
+data <- rbind(data1,data2)
+q <- ggplot(data,aes(x=x,fill=group))
+q <- q + geom_histogram(alpha=0.5,colour="black",pos="dodge")
+q <- q + scale_x_continuous("DNA damage")
+q <- q + scale_y_continuous("Number of mice")
+q <- q + scale_fill_brewer("",palette="Set1")
+q
+```
 
 ### Example 3
 
@@ -287,12 +384,43 @@ $\rightarrow$ Testing if average BMI levels differ across Scandinavia
 $$\text{H}_0: \mu_{\text{Norway}} = \mu_{\text{Denmark}} = \mu_{\text{Sweden}}$$
 $$\text{H}_1: \mu_{\text{Norway}} \ne \mu_{\text{Denmark}} \text{ and/or } \mu_{\text{Norway}} \ne \mu_{\text{Sweden}}  \text{ and/or } \mu_{\text{Denmark}} \ne \mu_{\text{Sweden}}$$
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+data1 <- data.frame(x=rnorm(1000,mean=18,sd=5), group="Norway", stringsAsFactors = F)
+data2 <- data.frame(x=rnorm(1000,mean=24,sd=5), group="Denmark", stringsAsFactors = F)
+data3 <- data.frame(x=rnorm(1000,mean=25,sd=5), group="Sweden", stringsAsFactors = F)
+data <- rbind(data1,data2,data3)
+q <- ggplot(data,aes(x=x,fill=group))
+q <- q + geom_histogram(alpha=0.5,colour="black",pos="dodge")
+q <- q + scale_x_continuous("BMI")
+q <- q + scale_y_continuous("Number of people")
+q <- q + scale_fill_brewer("",palette="Set1")
+q
+```
+
 ### Example 2
 
 $\rightarrow$ Testing if average water pH levels differ between East and West Oslo
 
 $$\text{H}_0: \mu_{\text{East Oslo}} = \mu_{\text{West Oslo}}$$
 $$\text{H}_1: \mu_{\text{East Oslo}} \ne \mu_{\text{West Oslo}}$$
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+data1 <- data.frame(x=rnorm(1000,mean=6.5,sd=5), group="East Oslo", stringsAsFactors = F)
+data2 <- data.frame(x=rnorm(1000,mean=7.2,sd=5), group="West Oslo", stringsAsFactors = F)
+data <- rbind(data1,data2)
+q <- ggplot(data,aes(x=x,fill=group))
+q <- q + geom_histogram(alpha=0.5,colour="black",pos="dodge")
+q <- q + scale_x_continuous("pH")
+q <- q + scale_y_continuous("Number of water samples")
+q <- q + scale_fill_brewer("",palette="Set1")
+q
+```
 
 ### Example 3
 
