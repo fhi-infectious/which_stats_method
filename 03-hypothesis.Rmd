@@ -262,6 +262,8 @@ $H_1:$
 
 Wilcoxon signed-rank test. This should be used when the Normality assumption fails.
 
+\newpage
+
 ## Two-sample Unpaired T-Test
 
 An unpaired t-test is where we have two independent groups of $N_1$ and $N_2$ participants, and we want to test if the mean of the outcome variable differs between $\text{group}_1$ and $\text{group}_2$.
@@ -300,6 +302,8 @@ q
 **Parametric assumptions**: Outcomes for each group are distributed as a Normal distribution
 
 **Dependencies**: None (all observations independent)
+
+\newpage
 
 ### Example 1
 
