@@ -244,6 +244,7 @@
 <p><strong>Exposure</strong>: Continuous, Binary, Categorical, Count variable</p>
 <p><strong>Parametric assumptions</strong>: Residuals are distributed as a Normal distribution</p>
 <p><strong>Dependencies</strong>: None (all observations independent)</p>
+
 </div>
 <div id="example-1-4" class="section level3">
 <h3><span class="header-section-number">5.2.2</span> Example 1</h3>
@@ -251,6 +252,7 @@
 <p><span class="math display">\[\text{birth weight} = \beta_0 + \beta_1 \times \text{parent&#39;s income} + \text{error}\]</span></p>
 <p><span class="math display">\[\text{H}_0: \beta_1 = 0\]</span> <span class="math display">\[\text{H}_1: \beta_1 \ne 0\]</span></p>
 <p><img src="which-stats-method_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+
 </div>
 <div id="example-2-4" class="section level3">
 <h3><span class="header-section-number">5.2.3</span> Example 2</h3>
@@ -258,6 +260,7 @@
 <p><span class="math display">\[\text{birth weight} = \beta_0 + \beta_1 \times \text{is boy} + \text{error}\]</span></p>
 <p><span class="math display">\[\text{H}_0: \beta_1 = 0\]</span> <span class="math display">\[\text{H}_1: \beta_1 \ne 0\]</span></p>
 <p><img src="which-stats-method_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+
 </div>
 <div id="example-3-4" class="section level3">
 <h3><span class="header-section-number">5.2.4</span> Example 3</h3>
@@ -273,6 +276,7 @@
 <div id="example-5" class="section level3">
 <h3><span class="header-section-number">5.2.6</span> Example 5</h3>
 <p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(H_0:\)</span> <span class="math inline">\(H_1:\)</span></p>
+
 </div>
 </div>
 <div id="similarities-between-t-tests-anova-and-linear-regression" class="section level2">
@@ -283,10 +287,12 @@
 <p><span class="math inline">\(\rightarrow\)</span> Testing if average birth weight (continuous outcome) is different in female children versus male children</p>
 <p><span class="math display">\[\text{H}_0: \mu_{\text{boys}} = \mu_{\text{girls}}\]</span> <span class="math display">\[\text{H}_1: \mu_{\text{boys}} \ne \mu_{\text{girls}}\]</span></p>
 <p><img src="which-stats-method_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+
 <p><strong>ANOVA</strong>:</p>
 <p><span class="math inline">\(\rightarrow\)</span> Testing if average birth weight (continuous outcome) is different in female children versus male children</p>
 <p><span class="math display">\[\text{H}_0: \mu_{\text{boys}} = \mu_{\text{girls}}\]</span> <span class="math display">\[\text{H}_1: \mu_{\text{boys}} \ne \mu_{\text{girls}}\]</span></p>
 <p><img src="which-stats-method_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+
 <p><strong>Linear regression</strong>:</p>
 <p><span class="math inline">\(\rightarrow\)</span> Testing if the effect of child’s sex on average birth weight (continuous outcome) is different than zero</p>
 <p><span class="math display">\[\text{birth weight} = \beta_0 + \beta_1 \times \text{is boy} + \text{error}\]</span> <span class="math display">\[\text{H}_0: \beta_1 = 0\]</span> <span class="math display">\[\text{H}_1: \beta_1 \ne 0\]</span></p>
@@ -297,6 +303,7 @@
 <li>Two-sample unpaired t-tests are linear regressions with a binary (0/1) exposure</li>
 <li>ANOVA is a linear regression with a categorical exposure</li>
 </ul>
+
 </div>
 <div id="example-2-5" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Example 2</h3>
@@ -304,10 +311,12 @@
 <p><span class="math inline">\(\rightarrow\)</span> Testing if average number of hours sleep (continuous outcome) is different in adults who are parents versus those who are childless</p>
 <p><span class="math display">\[\text{H}_0: \mu_{\text{parents}} = \mu_{\text{childless}}\]</span> <span class="math display">\[\text{H}_1: \mu_{\text{parents}} \ne \mu_{\text{childless}}\]</span></p>
 <p><img src="which-stats-method_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+
 <p><strong>ANOVA</strong>:</p>
 <p><span class="math inline">\(\rightarrow\)</span> Testing if average number of hours sleep (continuous outcome) is different in adults who are parents versus those who are childless</p>
 <p><span class="math display">\[\text{H}_0: \mu_{\text{parents}} = \mu_{\text{childless}}\]</span> <span class="math display">\[\text{H}_1: \mu_{\text{parents}} \ne \mu_{\text{childless}}\]</span></p>
 <p><img src="which-stats-method_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+
 <p><strong>Linear regression</strong>:</p>
 <p><span class="math inline">\(\rightarrow\)</span> Testing if the effect of being a parent on average number of hours sleep (continuous outcome) is different than zero</p>
 <p><span class="math display">\[\text{birth weight} = \beta_0 + \beta_1 \times \text{is parent} + \text{error}\]</span> <span class="math display">\[\text{H}_0: \beta_1 = 0\]</span> <span class="math display">\[\text{H}_1: \beta_1 \ne 0\]</span></p>
@@ -327,6 +336,7 @@
 <p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(H_0:\)</span> <span class="math inline">\(H_1:\)</span> </p>
 <p><strong>Linear regression</strong>:</p>
 <p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(H_0:\)</span> <span class="math inline">\(H_1:\)</span> </p>
+
 </div>
 </div>
 <div id="similarities-between-anova-and-linear-regression" class="section level2">
@@ -337,6 +347,7 @@
 <p><span class="math inline">\(\rightarrow\)</span> Testing if average birth weight (continuous outcome) differs between Scandinavian countries</p>
 <p><span class="math display">\[\text{H}_0: \mu_{\text{Norway}} = \mu_{\text{Denmark}} = \mu_{\text{Sweden}}\]</span> <span class="math display">\[\text{H}_1: \mu_{\text{Norway}} \ne \mu_{\text{Denmark}} \text{ and/or } \mu_{\text{Norway}} \ne \mu_{\text{Sweden}}  \text{ and/or } \mu_{\text{Denmark}} \ne \mu_{\text{Sweden}}\]</span></p>
 <p><img src="which-stats-method_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+
 <p><strong>Linear regression</strong>:</p>
 <p><span class="math inline">\(\rightarrow\)</span> Testing if the effect of country on average birth weight (continuous outcome) is different than zero</p>
 <p><span class="math display">\[\text{birth weight} = \beta_0 + \beta_1 \times \text{is Norway} + \beta_2 \times \text{is Denmark} + \text{error}\]</span> <span class="math display">\[\text{H}_0: \beta_1 = \beta_2 = 0\]</span> <span class="math display">\[\text{H}_1: \beta_1 \ne 0 \text{ and/or } \beta_2 \ne 0\]</span></p>

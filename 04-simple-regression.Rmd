@@ -106,6 +106,8 @@ If today's temperature is 30C, we can expect that children born today will be (o
 
 **Dependencies**: None (all observations independent)
 
+\newpage
+
 ### Example 1
 
 $\rightarrow$ Testing if average birth weight (continuous outcome) is associated with parents' income (continuous exposure)
@@ -133,6 +135,8 @@ q <- q + scale_y_continuous("Child's birthweight")
 q
 ```
 
+\newpage
+
 ### Example 2
 
 $\rightarrow$ Testing if average birth weight (continuous outcome) is associated with child's sex (binary exposure)
@@ -159,6 +163,8 @@ q <- q + scale_x_continuous("Child's sex (is male)")
 q <- q + scale_y_continuous("Child's birthweight")
 q
 ```
+
+\newpage
 
 ### Example 3
 
@@ -219,6 +225,8 @@ $H_0:$
 \hfill \break
 $H_1:$
 
+\newpage
+
 ## Similarities between t-tests, ANOVA, and linear regression
 
 ### Example 1
@@ -245,6 +253,8 @@ q <- q + scale_fill_brewer("",palette="Set1")
 q
 ```
 
+\newpage
+
 **ANOVA**:
 
 $\rightarrow$ Testing if average birth weight (continuous outcome) is different in female children versus male children
@@ -266,6 +276,8 @@ q <- q + scale_y_continuous("Number of babies")
 q <- q + scale_fill_brewer("",palette="Set1")
 q
 ```
+
+\newpage
 
 **Linear regression**:
 
@@ -300,6 +312,8 @@ q
 - Two-sample unpaired t-tests are linear regressions with a binary (0/1) exposure
 - ANOVA is a linear regression with a categorical exposure
 
+\newpage
+
 ### Example 2
 
 **Two-sample unpaired t-test**:
@@ -324,6 +338,8 @@ q <- q + scale_fill_brewer("",palette="Set1")
 q
 ```
 
+\newpage
+
 **ANOVA**:
 
 $\rightarrow$ Testing if average number of hours sleep (continuous outcome) is different in adults who are parents versus those who are childless
@@ -345,6 +361,8 @@ q <- q + scale_y_continuous("Number of people")
 q <- q + scale_fill_brewer("",palette="Set1")
 q
 ```
+
+\newpage
 
 **Linear regression**:
 
@@ -429,6 +447,8 @@ $H_1:$
 \hfill \break
 \hfill \break
 
+\newpage
+
 ## Similarities between ANOVA and linear regression
 
 ### Example 1
@@ -455,6 +475,8 @@ q <- q + scale_y_continuous("Number of babies")
 q <- q + scale_fill_brewer("",palette="Set1")
 q
 ```
+
+\newpage
 
 **Linear regression**:
 

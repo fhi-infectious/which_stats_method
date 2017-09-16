@@ -111,6 +111,8 @@ q <- q + scale_y_continuous("Number of people")
 q
 ```
 
+\newpage
+
 ### Example 2
 
 $\rightarrow$ Testing if the average pH of tap water is equal to 7
@@ -184,6 +186,8 @@ $$\text{H}_1: \mu_{\text{after}-\text{before}} \ne 0$$
 
 **Dependencies**: Paired data
 
+\newpage
+
 ### Example 1
 
 $\rightarrow$ Testing if there is a difference in blood pressure before and after treatment (measured on the same person)
@@ -203,6 +207,8 @@ q <- q + scale_x_continuous("BP after - BP before")
 q <- q + scale_y_continuous("Number of people")
 q
 ```
+
+\newpage
 
 ### Example 2
 
@@ -313,6 +319,8 @@ q <- q + scale_fill_brewer("",palette="Set1")
 q
 ```
 
+\newpage
+
 ### Example 2
 
 $\rightarrow$ Testing if the average DNA damage in mice that weren't irradiated is different from mice that were irradiated
@@ -379,6 +387,8 @@ ANOVA is an extension of the two-sample unpaired t-test. We have X independent g
 
 **Dependencies**: None (all observations independent)
 
+\newpage
+
 ### Example 1
 
 $\rightarrow$ Testing if average BMI levels differ across Scandinavia
@@ -401,6 +411,8 @@ q <- q + scale_y_continuous("Number of people")
 q <- q + scale_fill_brewer("",palette="Set1")
 q
 ```
+
+\newpage
 
 ### Example 2
 
