@@ -51,6 +51,8 @@ A Chi-Squared test is used to test if two categorical variables are associated w
 \hfill \break
 \hfill \break
 
+\newpage
+
 ## One Sample T-Test
 
 A one sample t-test tests if the mean of a continuous variable differs from a specified value (generally zero)
