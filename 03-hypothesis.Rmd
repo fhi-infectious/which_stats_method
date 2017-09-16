@@ -145,6 +145,8 @@ $H_0:$
 \hfill \break
 $H_1:$
 
+\newpage 
+
 ### Example 4
 
 $\rightarrow$
@@ -241,6 +243,8 @@ $H_0:$
 \hfill \break
 \hfill \break
 $H_1:$
+
+\newpage
 
 ### Example 4
 
@@ -355,6 +359,8 @@ $H_0:$
 \hfill \break
 $H_1:$
 
+\newpage
+
 ### Example 4
 
 $\rightarrow$
@@ -447,6 +453,8 @@ $H_0:$
 \hfill \break
 \hfill \break
 $H_1:$
+
+\newpage
 
 ### Example 4
 

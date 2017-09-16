@@ -397,6 +397,8 @@ q
 - Two-sample unpaired t-tests are linear regressions with a binary (0/1) exposure
 - ANOVA is a linear regression with a categorical exposure
 
+\newpage
+
 ### Example 3
 
 **Two-sample unpaired t-test**:
@@ -510,6 +512,8 @@ q
 
 - ANOVA is a linear regression with a categorical exposure
 
+\newpage
+
 ### Example 2
 
 **ANOVA**:
@@ -621,6 +625,8 @@ $H_0:$
 \hfill \break
 $H_1:$
 
+\newpage
+
 ## Poisson/negative-binomial regression models
 
 Poisson/negative-binomial regression is essentially the same as linear regression, but it is used when:
@@ -667,8 +673,9 @@ $H_0:$
 \hfill \break
 $H_1:$
 
+\newpage
 
-## Cox regression models should be used
+## Cox regression models
 
 Cox regression models should be used when your outcome is "time-to-event".
 

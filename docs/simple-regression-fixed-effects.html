@@ -148,7 +148,7 @@
 <li class="chapter" data-level="5.6.2" data-path="simple-regression-fixed-effects.html"><a href="simple-regression-fixed-effects.html#example-1-8"><i class="fa fa-check"></i><b>5.6.2</b> Example 1</a></li>
 <li class="chapter" data-level="5.6.3" data-path="simple-regression-fixed-effects.html"><a href="simple-regression-fixed-effects.html#example-2-8"><i class="fa fa-check"></i><b>5.6.3</b> Example 2</a></li>
 </ul></li>
-<li class="chapter" data-level="5.7" data-path="simple-regression-fixed-effects.html"><a href="simple-regression-fixed-effects.html#cox-regression-models-should-be-used"><i class="fa fa-check"></i><b>5.7</b> Cox regression models should be used</a><ul>
+<li class="chapter" data-level="5.7" data-path="simple-regression-fixed-effects.html"><a href="simple-regression-fixed-effects.html#cox-regression-models"><i class="fa fa-check"></i><b>5.7</b> Cox regression models</a><ul>
 <li class="chapter" data-level="5.7.1" data-path="simple-regression-fixed-effects.html"><a href="simple-regression-fixed-effects.html#aimoutcomeexposureparametricdependencies-8"><i class="fa fa-check"></i><b>5.7.1</b> Aim/Outcome/Exposure/Parametric/Dependencies</a></li>
 <li class="chapter" data-level="5.7.2" data-path="simple-regression-fixed-effects.html"><a href="simple-regression-fixed-effects.html#example-1-9"><i class="fa fa-check"></i><b>5.7.2</b> Example 1</a></li>
 <li class="chapter" data-level="5.7.3" data-path="simple-regression-fixed-effects.html"><a href="simple-regression-fixed-effects.html#example-2-9"><i class="fa fa-check"></i><b>5.7.3</b> Example 2</a></li>
@@ -327,6 +327,7 @@
 <li>Two-sample unpaired t-tests are linear regressions with a binary (0/1) exposure</li>
 <li>ANOVA is a linear regression with a categorical exposure</li>
 </ul>
+
 </div>
 <div id="example-3-5" class="section level3">
 <h3><span class="header-section-number">5.3.3</span> Example 3</h3>
@@ -356,6 +357,7 @@
 <ul>
 <li>ANOVA is a linear regression with a categorical exposure</li>
 </ul>
+
 </div>
 <div id="example-2-6" class="section level3">
 <h3><span class="header-section-number">5.4.2</span> Example 2</h3>
@@ -405,6 +407,7 @@
 <div id="example-5-1" class="section level3">
 <h3><span class="header-section-number">5.5.6</span> Example 5</h3>
 <p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(H_0:\)</span> <span class="math inline">\(H_1:\)</span></p>
+
 </div>
 </div>
 <div id="poissonnegative-binomial-regression-models" class="section level2">
@@ -432,10 +435,11 @@
 <div id="example-2-8" class="section level3">
 <h3><span class="header-section-number">5.6.3</span> Example 2</h3>
 <p><span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(H_0:\)</span> <span class="math inline">\(H_1:\)</span></p>
+
 </div>
 </div>
-<div id="cox-regression-models-should-be-used" class="section level2">
-<h2><span class="header-section-number">5.7</span> Cox regression models should be used</h2>
+<div id="cox-regression-models" class="section level2">
+<h2><span class="header-section-number">5.7</span> Cox regression models</h2>
 <p>Cox regression models should be used when your outcome is “time-to-event”.</p>
 <p>The most common example of this is when you are following a cohort of people over time, trying to observe an (e.g. sickness, death, response). Your outcome is “length of time until person X gets disease Y”. However, a number of your participants stop responding at some point, so you only know “person X was healthy up until 200 days, when we lost contact”.Thus person X’s outcome has been censored at day 200.</p>
 <div id="aimoutcomeexposureparametricdependencies-8" class="section level3">
