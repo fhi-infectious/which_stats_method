@@ -1,4 +1,17 @@
-# Variable Types
+# Variables
+
+## Introduction
+
+A variable is anything that can be measured or counted. In general, we think of our datasets as a rectangle, with a column for each variable and a row for each observation (there are some exceptions when discussing long/wide formatted data, but that is out of the scope of this course).
+
+We care about four attributes of the variables:
+
+- the variable's type (statistical relevance)
+- the different values the variable can take (statistical relevance)
+- is the variable clean (i.e. ready to use in an analysis?) (statistical relevance)
+- the name of the variable (useful for us)
+
+We can use the fourth attribute to help us remember the first three.
 
 ## Continuous Variables
 
@@ -18,6 +31,8 @@ For example:
 \hfill \break
 \hfill \break
 
+Clean continuous variables can be given the prefix `c_` to denote that they are clean. For example, `temperature` could be called `c_temperature` after it has been cleaned and is ready for analysis.
+
 ## Binary Variables
 
 A variable is binary if it can only hold two values.
@@ -36,6 +51,8 @@ For example:
 \hfill \break
 \hfill \break
 
+Clean binary variables can be given the prefix `is_` to denote that they are clean, binary, and reference the "active state". For example, an unclean variable called `sex` could be recoded as 0 for female and 1 for male, then called `is_male` to denote that it is clean (ready for analysis), binary, and "male" is the active state when `is_male=1`.
+
 ## Categorical Variable
 
 A variable is categorical if there is no meaningful "distance" between values.
@@ -53,6 +70,8 @@ For example:
 \hfill \break
 \hfill \break
 
+Clean categorical variables can be given the prefix `c_` to denote that they are clean. For example, `BMI category` could be called `c_bmi_category` after it has been cleaned and is ready for analysis.
+
 ## Censored Variables
 
 Censored variables are a subset of continuous variables. They are artificially cutoff ("censored") at some point.
@@ -68,6 +87,9 @@ For example:
 - 
 \hfill \break
 \hfill \break
+
+Clean censored variables can be given the prefix `c_` to denote that they are clean. For example, `time alive since receiving illness diagnosis` could be called `c_time_alive` after it has been cleaned and is ready for analysis.
+
 
 ## Count Variables
 
@@ -85,6 +107,8 @@ For example:
 \hfill \break
 \hfill \break
 
+Clean count variables can be given the prefix `c_` to denote that they are clean. For example, `number of cars` could be called `c_num_cars` after it has been cleaned and is ready for analysis.
+
 ## Independent Versus Dependent Variables
 
 An independent variable is often called an exposure or predictor variable. In an experiment, this variable is manipulated by the researcher.
@@ -96,4 +120,20 @@ A dependent variable is often called the outcome. In research, we generally want
 - The exposure affects the outcome
 
 For ease of understanding, we will use the terms "outcome" and "exposure" for the rest of this course.
+
+## Dataset workflow (pipeline)
+
+- We begin with a raw dataset (this is never altered)
+- We clean the raw dataset and create new variables as needed
+- We save a "clean" dataset (all variables have the prefixes `c_` or `is_`)
+- We ONLY run analyses on the clean dataset
+
+We do all of this in "do files" that allow us to recreate the clean dataset from the raw dataset.
+
+Think of our analysis as making dinner, with the `do files` as our `recipe` and the `raw dataset` as our `raw ingredients`. The `recipe` tells us how to prepare the `raw ingredients` (`clean dataset`) and how to `cook` (`analyse`) the `prepared ingredients` (`clean dataset`) to produce the `food` (`results`).
+
+All we need are `raw ingredients` and the `recipe`! The `prepared ingredients` and the `food` are downstream by-products!
+
+This means that if our code is written correctly, we can delete our `clean datasets` and `results` without any worry, because the `raw dataset` and `do files` are sufficient.
+
 

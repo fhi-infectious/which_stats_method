@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="good-folder-structure.html">
-<link rel="next" href="solutions.html">
+<link rel="prev" href="reference.html">
+<link rel="next" href="simple-hypothesis-testing-chi-squared-t-tests-and-anova.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -207,130 +207,113 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="examples-1" class="section level1">
-<h1><span class="header-section-number">Chapter 8</span> Examples</h1>
-<div id="poisons-information-center" class="section level2">
-<h2><span class="header-section-number">8.1</span> Poisons Information Center</h2>
-<div class="figure">
-<img src="resources/poisons_information_center.jpg" alt="img" />
-<p class="caption">img</p>
-</div>
-<p>Scenario:</p>
+<div id="variables" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Variables</h1>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">3.1</span> Introduction</h2>
+<p>A variable is anything that can be measured or counted. In general, we think of our datasets as a rectangle, with a column for each variable and a row for each observation (there are some exceptions when discussing long/wide formatted data, but that is out of the scope of this course).</p>
+<p>We care about four attributes of the variables:</p>
 <ul>
-<li>Approximately 40 000 calls per year</li>
-<li>The frequency of calls regarding different drugs/plants etc varies greatly, from a couple per year to thousands per year, so most probably one method will not cover everything.</li>
-<li>The registration of data is done while on the phone, and we know there are mistakes</li>
-<li>Only the field Kommentar has free text</li>
+<li>the variable’s type (statistical relevance)</li>
+<li>the different values the variable can take (statistical relevance)</li>
+<li>is the variable clean (i.e. ready to use in an analysis?) (statistical relevance)</li>
+<li>the name of the variable (useful for us)</li>
 </ul>
-<p>Question: Is the number of calls regarding women aged 15-19 who have been exposed to paracetamol rising or falling over the years.</p>
-<p><strong>Aim</strong>:</p>
-<p><strong>Outcome</strong>:</p>
-<p><strong>Exposure</strong>:</p>
-<p><strong>Parametric assumptions</strong>:</p>
-<p><strong>Dependencies</strong>:</p>
+<p>We can use the fourth attribute to help us remember the first three.</p>
 </div>
-<div id="norwegian-water-pipes" class="section level2">
-<h2><span class="header-section-number">8.2</span> Norwegian Water Pipes</h2>
-<p>Scenario:</p>
+<div id="continuous-variables" class="section level2">
+<h2><span class="header-section-number">3.2</span> Continuous Variables</h2>
+<p>A variable is continuous there is a meaningful “distance” between values.</p>
+<p>For example:</p>
 <ul>
-<li>146 waterworks in 19 counties in Norway</li>
-<li>Each waterwork uses pipes to deliver water to households</li>
-<li>Information on each waterwork:</li>
-<li>Length of pipes made out of asbestos (in meters)</li>
-<li>Length of pipes made out of iron/steel (in meters)</li>
-<li>Length of pipes made out of PVC (in meters)</li>
-<li>Length of pipes made out of PE/PEH (in meters)</li>
-<li>Length of pipes made out of other (in meters)</li>
-<li>Length of pipes made out of unknown (in meters)</li>
-<li>Length of pipes installed before 1910 (in meters)</li>
-<li>Length of pipes installed in 1910-1940 (in meters)</li>
-<li>Length of pipes installed in 1941-1970 (in meters)</li>
-<li>Length of pipes installed in 1971-2000 (in meters)</li>
-<li>Length of pipes installed after 2000 (in meters)</li>
-<li>Length of pipes installed during an unknown period (in meters)</li>
-<li>Each year, some new pipes are laid to extend the network</li>
-<li>Each year, some pipes are replaced</li>
-<li>Interruption in water delivery is estimated in hours per calendar year</li>
-<li>Data is only for 2015</li>
+<li>Temperature</li>
+<li>Weight</li>
+<li>Height</li>
+<li>BMI</li>
+<li>Blood pressure</li>
+<li></li>
+<li></li>
 </ul>
-<p>Question: Is there an association between “interuption in water delivery” and “type of pipe material” and “pipe installation period”</p>
-<p><strong>Aim</strong>:</p>
-<p><strong>Outcome</strong>:</p>
-<p><strong>Exposure</strong>:</p>
-<p><strong>Parametric assumptions</strong>:</p>
-<p><strong>Dependencies</strong>:</p>
+<p>Clean continuous variables can be given the prefix <code>c_</code> to denote that they are clean. For example, <code>temperature</code> could be called <code>c_temperature</code> after it has been cleaned and is ready for analysis.</p>
 </div>
-<div id="early-warning-system-ews-for-waterborne-outbreaks-part-1" class="section level2">
-<h2><span class="header-section-number">8.3</span> Early warning system (EWS) for waterborne outbreaks (part 1)</h2>
-<p>Scenario:</p>
+<div id="binary-variables" class="section level2">
+<h2><span class="header-section-number">3.3</span> Binary Variables</h2>
+<p>A variable is binary if it can only hold two values.</p>
+<p>For example:</p>
 <ul>
-<li>NorSySS is a syndromic surveillance system for infectious diseases, run by the NIPH.</li>
-<li>The system is based on national ICPC coded consultation data from general practice in Norway.</li>
-<li>We want to study to what extent NorSySS can serve as an early warning system for local waterborne outbreaks by alerting us to increases in consultation rates for syndromes indicative of gastrointestinal diseases.<br />
-</li>
-<li>Retrospective syndrome data (number of gastritis cases, per week, for each municipality) from NorSySS will be aligned with outbreak data (outbreak=yes/no) from the national web-based outbreak rapid alert system (Vesuv) for the period 2006-2017.</li>
+<li>0 or 1</li>
+<li>True or false</li>
+<li>Male or female</li>
+<li>Sick or healthy</li>
+<li>Born in Norway vs Born outside of Norway</li>
+<li></li>
+<li></li>
 </ul>
-<p>Question: Is there an association between “recorded outbreak” and “number of gastritis cases”</p>
-<p><strong>Aim</strong>:</p>
-<p><strong>Outcome</strong>:</p>
-<p><strong>Exposure</strong>:</p>
-<p><strong>Parametric assumptions</strong>:</p>
-<p><strong>Dependencies</strong>:</p>
+<p>Clean binary variables can be given the prefix <code>is_</code> to denote that they are clean, binary, and reference the “active state”. For example, an unclean variable called <code>sex</code> could be recoded as 0 for female and 1 for male, then called <code>is_male</code> to denote that it is clean (ready for analysis), binary, and “male” is the active state when <code>is_male=1</code>.</p>
 </div>
-<div id="early-warning-system-ews-for-waterborne-outbreaks-part-2" class="section level2">
-<h2><span class="header-section-number">8.4</span> Early warning system (EWS) for waterborne outbreaks (part 2)</h2>
-<p>Scenario:</p>
+<div id="categorical-variable" class="section level2">
+<h2><span class="header-section-number">3.4</span> Categorical Variable</h2>
+<p>A variable is categorical if there is no meaningful “distance” between values.</p>
+<p>For example:</p>
 <ul>
-<li>We have weekly data on water quality from water works (e.g. pH, turbidity)</li>
-<li>We have weekly number of gastritis cases, per week, for each municipality</li>
-<li>We hope to increase the knowledge about causes of waterborne outbreaks and to develop an improved surveillance system for early detection of future outbreaks.</li>
+<li>Sick or healthy</li>
+<li>Born in Norway vs Born outside of Norway</li>
+<li>Cancer stage (I, II, III, or IV)</li>
+<li>BMI category (underweight, normal, or overweight)</li>
+<li></li>
+<li></li>
 </ul>
-<p>Question: Is there an association between “weekly number of gastritis cases” and “water quality from the water works”</p>
-<p><strong>Aim</strong>:</p>
-<p><strong>Outcome</strong>:</p>
-<p><strong>Exposure</strong>:</p>
-<p><strong>Parametric assumptions</strong>:</p>
-<p><strong>Dependencies</strong>:</p>
+<p>Clean categorical variables can be given the prefix <code>c_</code> to denote that they are clean. For example, <code>BMI category</code> could be called <code>c_bmi_category</code> after it has been cleaned and is ready for analysis.</p>
 </div>
-<div id="incidents-in-the-water-supply-system-and-illness" class="section level2">
-<h2><span class="header-section-number">8.5</span> Incidents in the water supply system and illness</h2>
-<p>Scenario:</p>
+<div id="censored-variables" class="section level2">
+<h2><span class="header-section-number">3.5</span> Censored Variables</h2>
+<p>Censored variables are a subset of continuous variables. They are artificially cutoff (“censored”) at some point.</p>
+<p>For example:</p>
 <ul>
-<li>Data from the water works operation (pH, turbidity) will be linked to health outcome among recipients of the drinking water.</li>
-<li>The study will be a prospective cohort study, with data collected among a random selection of water works.</li>
-<li>Data from the recruited water works will be collected in the period autumn 2017 and the 12 following months.</li>
-<li>Approximately 350 water works will be recruited to provide monthly data on hygienic critical points related to operation and maintenance of the water supply system.</li>
-<li>In parallel, a cohort of approximately 9000 persons, served by water from the recruited water works, will submit monthly reports on symptoms that may indicate gastrointestinal illness.</li>
-<li>The data collection will start in the autumn of 2017 and continue for 12 months.</li>
+<li>Height – if everyone over 175cm is recorded as “175+”</li>
+<li>Age – if everyone under 10 years old is recorded as “&lt;=10”</li>
+<li>Time alive since receiving illness diagnosis if there is loss to followup (i.e. we know that the person has lived at least 4 years before we lost track of them)</li>
+<li></li>
+<li></li>
 </ul>
-<p>Question: Is water quality a risk factor for getting sick?</p>
-<p><strong>Aim</strong>:</p>
-<p><strong>Outcome</strong>:</p>
-<p><strong>Exposure</strong>:</p>
-<p><strong>Parametric assumptions</strong>:</p>
-<p><strong>Dependencies</strong>:</p>
+<p>Clean censored variables can be given the prefix <code>c_</code> to denote that they are clean. For example, <code>time alive since receiving illness diagnosis</code> could be called <code>c_time_alive</code> after it has been cleaned and is ready for analysis.</p>
 </div>
-<div id="compliance-with-boil-water-advisories-and-perception-of-risks" class="section level2">
-<h2><span class="header-section-number">8.6</span> Compliance with boil water advisories and perception of risks</h2>
-<p>Scenario:</p>
+<div id="count-variables" class="section level2">
+<h2><span class="header-section-number">3.6</span> Count Variables</h2>
+<p>Count variables are a subset of continuous variables. They can only have integer values (e.g. 0, 1, 2, 3).</p>
+<p>For example:</p>
 <ul>
-<li>In this study, the compliance and perception of risks among the public with boil water advisories (BWAs) will be examined.</li>
-<li>Although BWAs is a common practice among water utilities, a meta-study suggest that there is limited information and studies on the compliance of BWAs.</li>
-<li>This part, the compliance and perception of risks will be done by studying the perception of and adherence to BWAs among the consumers of drinking water in Bærum municipality.</li>
-<li>Even though the drinking water in Bærum is considered to have good quality, Bærum – like many water works – experience situations of pressure drops due to breaks and maintenance.</li>
-<li>Research has shown that these situations may lead to an increased risk of gastrointestinal infections, and due to this the municipality of Bærum has issued a precautionary BWAs to the affected consumers with every water outage during the last 5-6 years.</li>
-<li>Every year, some 12,000-22,000 consumers have received a precautionary BWA.</li>
-<li>The purpose of these precautionary BWAs is to prevent health consequences caused by possible contamination of water. However, we know little about the consumer’s knowledge about why they receive these BWAs, as well as the way the consumers perceive and adhere to these BWAs.</li>
-<li>This is a cross-sectional study.</li>
-<li>A web-survey will be presented to a randomly selected sample of consumers who received a BWA i Bærum in 2017.</li>
-<li>The web-survey asks about adherence (yes/no) and demographics (e.g. age, sex, income)</li>
+<li>Number of cars that use the parking lot in a day</li>
+<li>Number of influenza patients who use the hospital every day</li>
+<li>Number of tuberculosis patients who are screened every year</li>
+<li></li>
+<li></li>
 </ul>
-<p>Question: Estimate adherence by demographics (and identify if it differs by demographics)</p>
-<p><strong>Aim</strong>:</p>
-<p><strong>Outcome</strong>:</p>
-<p><strong>Exposure</strong>:</p>
-<p><strong>Parametric assumptions</strong>:</p>
-<p><strong>Dependencies</strong>:</p>
+<p>Clean count variables can be given the prefix <code>c_</code> to denote that they are clean. For example, <code>number of cars</code> could be called <code>c_num_cars</code> after it has been cleaned and is ready for analysis.</p>
+</div>
+<div id="independent-versus-dependent-variables" class="section level2">
+<h2><span class="header-section-number">3.7</span> Independent Versus Dependent Variables</h2>
+<p>An independent variable is often called an exposure or predictor variable. In an experiment, this variable is manipulated by the researcher.</p>
+<p>A dependent variable is often called the outcome. In research, we generally want to see if (the following all mean the same thing):</p>
+<ul>
+<li>The dependent variable is dependent on the independent variable</li>
+<li>The predictor variable predicts the outcome.</li>
+<li>The exposure affects the outcome</li>
+</ul>
+<p>For ease of understanding, we will use the terms “outcome” and “exposure” for the rest of this course.</p>
+</div>
+<div id="dataset-workflow-pipeline" class="section level2">
+<h2><span class="header-section-number">3.8</span> Dataset workflow (pipeline)</h2>
+<ul>
+<li>We begin with a raw dataset (this is never altered)</li>
+<li>We clean the raw dataset and create new variables as needed</li>
+<li>We save a “clean” dataset (all variables have the prefixes <code>c_</code> or <code>is_</code>)</li>
+<li>We ONLY run analyses on the clean dataset</li>
+</ul>
+<p>We do all of this in “do files” that allow us to recreate the clean dataset from the raw dataset.</p>
+<p>Think of our analysis as making dinner, with the <code>do files</code> as our <code>recipe</code> and the <code>raw dataset</code> as our <code>raw ingredients</code>. The <code>recipe</code> tells us how to prepare the <code>raw ingredients</code> (<code>clean dataset</code>) and how to <code>cook</code> (<code>analyse</code>) the <code>prepared ingredients</code> (<code>clean dataset</code>) to produce the <code>food</code> (<code>results</code>).</p>
+<p>All we need are <code>raw ingredients</code> and the <code>recipe</code>! The <code>prepared ingredients</code> and the <code>food</code> are downstream by-products!</p>
+<p>This means that if our code is written correctly, we can delete our <code>clean datasets</code> and <code>results</code> without any worry, because the <code>raw dataset</code> and <code>do files</code> are sufficient.</p>
 
 </div>
 </div>
@@ -339,8 +322,8 @@
           </div>
         </div>
       </div>
-<a href="good-folder-structure.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="solutions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="simple-hypothesis-testing-chi-squared-t-tests-and-anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -369,7 +352,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/raubreywhite/which_stats_method/edit/master/07_examples.Rmd",
+"link": "https://github.com/raubreywhite/which_stats_method/edit/master/02-variables.Rmd",
 "text": "Edit"
 },
 "download": ["which-stats-method.pdf"],
