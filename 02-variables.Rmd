@@ -31,7 +31,7 @@ For example:
 \hfill \break
 \hfill \break
 
-Clean continuous variables can be given the prefix `c_` to denote that they are clean. For example, `temperature` could be called `c_temperature` after it has been cleaned and is ready for analysis.
+Clean continuous variables can be given the prefix `con_` to denote that they are clean. For example, `temperature` could be called `con_temperature` after it has been cleaned and is ready for analysis.
 
 ## Binary Variables
 
@@ -70,7 +70,7 @@ For example:
 \hfill \break
 \hfill \break
 
-Clean categorical variables can be given the prefix `c_` to denote that they are clean. For example, `BMI category` could be called `c_bmi_category` after it has been cleaned and is ready for analysis.
+Clean categorical variables can be given the prefix `cat_` to denote that they are clean. For example, `BMI category` could be called `cat_bmi` after it has been cleaned and is ready for analysis.
 
 ## Censored Variables
 
@@ -88,7 +88,7 @@ For example:
 \hfill \break
 \hfill \break
 
-Clean censored variables can be given the prefix `c_` to denote that they are clean. For example, `time alive since receiving illness diagnosis` could be called `c_time_alive` after it has been cleaned and is ready for analysis.
+Clean censored variables can be given the prefix `cen_` to denote that they are clean. For example, `time alive since receiving illness diagnosis` could be called `cen_time_alive` after it has been cleaned and is ready for analysis.
 
 
 ## Count Variables
@@ -107,7 +107,7 @@ For example:
 \hfill \break
 \hfill \break
 
-Clean count variables can be given the prefix `c_` to denote that they are clean. For example, `number of cars` could be called `c_num_cars` after it has been cleaned and is ready for analysis.
+Clean count variables can be given the prefix `cou_` to denote that they are clean. For example, `number of cars` could be called `cou_num_cars` after it has been cleaned and is ready for analysis.
 
 ## Independent Versus Dependent Variables
 
